@@ -1,15 +1,15 @@
 {
   "mainAssemblyName": "TravelPlanner",
   "resources": {
-    "hash": "sha256-/psMPN2lb7qA+W+kGC5dpBUyHEaInUQVDCinLkBlsKY=",
+    "hash": "sha256-FGBk8EnJXXT9zv8rCXL3yzBWnPlJHlCbWSZcGgbI5rQ=",
     "jsModuleNative": {
-      "dotnet.native.8.0.1.h2ftxk9a4x.js": "sha256-SGOlISx+3G4kkvpC9Uq3qoPGsnjxGmW61QBev0lyI5U="
+      "dotnet.native.8.0.3.ak553w96vj.js": "sha256-D4sYBYmDfH/YekgYRgX959/2RG6k28sJSHmcsn+iikk="
     },
     "jsModuleRuntime": {
-      "dotnet.runtime.8.0.1.co5u1vas9i.js": "sha256-HZOoaGpz9ekMa/oSmeApSKp3DXNdVUq2UBqsTIIiN8A="
+      "dotnet.runtime.8.0.3.b85ar3xvhg.js": "sha256-eQgtmRxLcbxYmADDa49CHs/GuJ7nM6d/UFWo4EVhuIw="
     },
     "wasmNative": {
-      "dotnet.native.wasm": "sha256-dqpunZywlYy86b4O6ZjONasmG+4FH0P17FZ0OIf/lIg="
+      "dotnet.native.wasm": "sha256-eVeGwMx+BfzNeU727VmCADSEBzGFWGkvJAX0XZdSVkQ="
     },
     "icu": {
       "icudt_CJK.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
@@ -24,6 +24,9 @@
       "Google.Apis.Cloudchannel.v1.wasm": "sha256-o2dc+vlmYFqh7/m8ydz4C0gXqoMX8E6Vjticd5k4ukM=",
       "Google.Apis.Core.wasm": "sha256-xco/WLEIoyIe9dfi3qRSo3LOj6TdoSs1nfH7yxlBCM0=",
       "GoogleApi.wasm": "sha256-Js6N1q7ceErF2Pc8q2PADEpgd1tGL1JAaQVR9akYRKc=",
+      "Google.Maps.Places.wasm": "sha256-QgSZcYngKueGxGL+dTDTZt0SWyHbEUouUAfDy/p4vn8=",
+      "GooglePlacesApi.Abstractions.wasm": "sha256-eklhT1eTyqY7eOAn3JeCbDQL5P6/fKih1jUv5Chw6OE=",
+      "GooglePlacesApi.wasm": "sha256-8xg4cSOvsZWiht0YTxOH8mGtdSoisCPjJzqn1f9dUoU=",
       "Microsoft.AspNetCore.Authorization.wasm": "sha256-xpsdU9uDJz5t2/e+ZH5CkB8nfZeCmSo9PqwquQX4B2U=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-buD5cBBc62HWdCjvn6Z3Zo39W90qvd5Wk6QfHoBzWqw=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-K/+6c3zlmAc3Y2qud/ksu/AexTbQpjbOhmTw03Ttg7E=",
@@ -55,6 +58,7 @@
       "MudBlazor.wasm": "sha256-3Uo5oUK14Vfk4TYTlb6woadtf51u7jUPo19NapgWH2I=",
       "Newtonsoft.Json.wasm": "sha256-GlXMWKvDs45M2pACoR3Y4Qh8mcrOZGljqmvJY+6JZ5s=",
       "OneOf.wasm": "sha256-tf7kgNktFKGLy8YdEkN2Euh9dR4u/HaZ+Gozsy0Dx30=",
+      "Refit.wasm": "sha256-PDQbxCtWyKpdIlAcX4C5vIvXP7/mFHBngaGD6RpH3EQ=",
       "System.CodeDom.wasm": "sha256-bfK544jMUpUiNA09b7vzgsWbHoETYSwxx8thBEVhKrE=",
       "System.IO.Pipelines.wasm": "sha256-JqVBy6SV+3qk+IK3VJiyIDt9CsVk6b1/ytTXmrI4mTM=",
       "System.Management.wasm": "sha256-Tk0+GkoGBNUgoR1Jgh4K49vUn54FmVDBHQiiYQclrzY=",
@@ -226,10 +230,10 @@
       "mscorlib.wasm": "sha256-EpWTfh4m/hEcXRFYMCR9YeYHwdUJgcm1laBaxWfq2S4=",
       "netstandard.wasm": "sha256-2kH24/YfHmU3B4eYRyRmiwebYROM4+B9eDWKvMnUdP8=",
       "System.Private.CoreLib.wasm": "sha256-CsySKiP7HYY1pS8LTDE60EkqiX5oHb3WoEZHDNd1yK0=",
-      "TravelPlanner.wasm": "sha256-xejtCXTRG89ZD5XnVMK+WQ4KeRLOHkXI7H7IfHcdAHc="
+      "TravelPlanner.wasm": "sha256-xv79KCH5MHNEMBbkiCpT++vl3/0ndlR/Z7BZsulYHaU="
     },
     "pdb": {
-      "TravelPlanner.pdb": "sha256-yLYSsISoRL5q7mrxM3QjIML4Bn6/VfxoFDQaoh6o/fI="
+      "TravelPlanner.pdb": "sha256-X7eU0J8AJJebAnw1K06+MNUhKH0Lwq65SiyzdqJ86Pg="
     }
   },
   "cacheBootResources": true,

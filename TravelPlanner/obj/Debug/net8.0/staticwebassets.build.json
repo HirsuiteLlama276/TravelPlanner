@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "B/0pSSJIlt6K/HTPrVseaYBFdN04TjF7MGvAos6/P1c=",
+  "Hash": "BJhiFAI2T3lzaTO1A2jye1392qBI88CUdCNB3YXPZvE=",
   "Source": "TravelPlanner",
   "BasePath": "/",
   "Mode": "Root",
@@ -280,7 +280,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/home/kuba/.nuget/packages/microsoft.netcore.app.runtime.mono.browser-wasm/8.0.1/runtimes/browser-wasm/native/dotnet.js"
+      "OriginalItemSpec": "/usr/share/dotnet/packs/Microsoft.NETCore.App.Runtime.Mono.browser-wasm/8.0.3/runtimes/browser-wasm/native/dotnet.js"
     },
     {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.js.map",
@@ -299,15 +299,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/home/kuba/.nuget/packages/microsoft.netcore.app.runtime.mono.browser-wasm/8.0.1/runtimes/browser-wasm/native/dotnet.js.map"
+      "OriginalItemSpec": "/usr/share/dotnet/packs/Microsoft.NETCore.App.Runtime.Mono.browser-wasm/8.0.3/runtimes/browser-wasm/native/dotnet.js.map"
     },
     {
-      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.native.8.0.1.h2ftxk9a4x.js",
+      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.native.8.0.3.ak553w96vj.js",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
       "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
       "BasePath": "/",
-      "RelativePath": "_framework/dotnet.native.8.0.1.h2ftxk9a4x.js",
+      "RelativePath": "_framework/dotnet.native.8.0.3.ak553w96vj.js",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -318,7 +318,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/home/kuba/.nuget/packages/microsoft.netcore.app.runtime.mono.browser-wasm/8.0.1/runtimes/browser-wasm/native/dotnet.native.js"
+      "OriginalItemSpec": "/usr/share/dotnet/packs/Microsoft.NETCore.App.Runtime.Mono.browser-wasm/8.0.3/runtimes/browser-wasm/native/dotnet.native.js"
     },
     {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.native.wasm",
@@ -337,15 +337,15 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/home/kuba/.nuget/packages/microsoft.netcore.app.runtime.mono.browser-wasm/8.0.1/runtimes/browser-wasm/native/dotnet.native.wasm"
+      "OriginalItemSpec": "/usr/share/dotnet/packs/Microsoft.NETCore.App.Runtime.Mono.browser-wasm/8.0.3/runtimes/browser-wasm/native/dotnet.native.wasm"
     },
     {
-      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.runtime.8.0.1.co5u1vas9i.js",
+      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.runtime.8.0.3.b85ar3xvhg.js",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
       "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
       "BasePath": "/",
-      "RelativePath": "_framework/dotnet.runtime.8.0.1.co5u1vas9i.js",
+      "RelativePath": "_framework/dotnet.runtime.8.0.3.b85ar3xvhg.js",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -356,7 +356,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/home/kuba/.nuget/packages/microsoft.netcore.app.runtime.mono.browser-wasm/8.0.1/runtimes/browser-wasm/native/dotnet.runtime.js"
+      "OriginalItemSpec": "/usr/share/dotnet/packs/Microsoft.NETCore.App.Runtime.Mono.browser-wasm/8.0.3/runtimes/browser-wasm/native/dotnet.runtime.js"
     },
     {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.runtime.js.map",
@@ -375,7 +375,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/home/kuba/.nuget/packages/microsoft.netcore.app.runtime.mono.browser-wasm/8.0.1/runtimes/browser-wasm/native/dotnet.runtime.js.map"
+      "OriginalItemSpec": "/usr/share/dotnet/packs/Microsoft.NETCore.App.Runtime.Mono.browser-wasm/8.0.3/runtimes/browser-wasm/native/dotnet.runtime.js.map"
     },
     {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/Google.Apis.Auth.wasm",
@@ -454,6 +454,25 @@
       "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/webcil/Google.Apis.wasm"
     },
     {
+      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/Google.Maps.Places.wasm",
+      "SourceId": "TravelPlanner",
+      "SourceType": "Computed",
+      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Google.Maps.Places.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/webcil/Google.Maps.Places.wasm"
+    },
+    {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/GoogleApi.wasm",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
@@ -492,6 +511,44 @@
       "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/webcil/GoogleMapsComponents.wasm"
     },
     {
+      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/GooglePlacesApi.Abstractions.wasm",
+      "SourceId": "TravelPlanner",
+      "SourceType": "Computed",
+      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/GooglePlacesApi.Abstractions.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/webcil/GooglePlacesApi.Abstractions.wasm"
+    },
+    {
+      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/GooglePlacesApi.wasm",
+      "SourceId": "TravelPlanner",
+      "SourceType": "Computed",
+      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/GooglePlacesApi.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/webcil/GooglePlacesApi.wasm"
+    },
+    {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/icudt_CJK.dat",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
@@ -508,7 +565,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/home/kuba/.nuget/packages/microsoft.netcore.app.runtime.mono.browser-wasm/8.0.1/runtimes/browser-wasm/native/icudt_CJK.dat"
+      "OriginalItemSpec": "/usr/share/dotnet/packs/Microsoft.NETCore.App.Runtime.Mono.browser-wasm/8.0.3/runtimes/browser-wasm/native/icudt_CJK.dat"
     },
     {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/icudt_EFIGS.dat",
@@ -527,7 +584,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/home/kuba/.nuget/packages/microsoft.netcore.app.runtime.mono.browser-wasm/8.0.1/runtimes/browser-wasm/native/icudt_EFIGS.dat"
+      "OriginalItemSpec": "/usr/share/dotnet/packs/Microsoft.NETCore.App.Runtime.Mono.browser-wasm/8.0.3/runtimes/browser-wasm/native/icudt_EFIGS.dat"
     },
     {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/icudt_no_CJK.dat",
@@ -546,7 +603,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/home/kuba/.nuget/packages/microsoft.netcore.app.runtime.mono.browser-wasm/8.0.1/runtimes/browser-wasm/native/icudt_no_CJK.dat"
+      "OriginalItemSpec": "/usr/share/dotnet/packs/Microsoft.NETCore.App.Runtime.Mono.browser-wasm/8.0.3/runtimes/browser-wasm/native/icudt_no_CJK.dat"
     },
     {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/Microsoft.AspNetCore.Authorization.wasm",
@@ -1269,6 +1326,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/webcil/OneOf.wasm"
+    },
+    {
+      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/Refit.wasm",
+      "SourceId": "TravelPlanner",
+      "SourceType": "Computed",
+      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Refit.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/webcil/Refit.wasm"
     },
     {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/System.AppContext.wasm",
@@ -4425,25 +4501,6 @@
       "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/webcil/WindowsBase.wasm"
     },
     {
-      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/02p7lfn4rh.gz",
-      "SourceId": "TravelPlanner",
-      "SourceType": "Computed",
-      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.js.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.js",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.js"
-    },
-    {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/03blp6gt1p.gz",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
@@ -4501,6 +4558,25 @@
       "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/Microsoft.Extensions.Configuration.wasm"
     },
     {
+      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/0vtxx4jtr6.gz",
+      "SourceId": "TravelPlanner",
+      "SourceType": "Computed",
+      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.js.map.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.js.map",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.js.map"
+    },
+    {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/1589bcvfc1.gz",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
@@ -4556,6 +4632,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/System.Numerics.Vectors.wasm"
+    },
+    {
+      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/18qzkjujq2.gz",
+      "SourceId": "TravelPlanner",
+      "SourceType": "Computed",
+      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt_CJK.dat.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/icudt_CJK.dat",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/icudt_CJK.dat"
     },
     {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/1ebuehfiq8.gz",
@@ -4786,25 +4881,6 @@
       "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/Microsoft.Extensions.Logging.wasm"
     },
     {
-      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/2v71luaewc.gz",
-      "SourceId": "TravelPlanner",
-      "SourceType": "Computed",
-      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.runtime.js.map.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.runtime.js.map",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.runtime.js.map"
-    },
-    {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/33diyhbm2d.gz",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
@@ -4993,25 +5069,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/System.Diagnostics.Debug.wasm"
-    },
-    {
-      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/4vu7tp3uxh.gz",
-      "SourceId": "TravelPlanner",
-      "SourceType": "Computed",
-      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt_EFIGS.dat.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/icudt_EFIGS.dat",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/icudt_EFIGS.dat"
     },
     {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/523jw5xfe9.gz",
@@ -5261,25 +5318,6 @@
       "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/System.Reflection.DispatchProxy.wasm"
     },
     {
-      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/7a50944dfz.gz",
-      "SourceId": "TravelPlanner",
-      "SourceType": "Computed",
-      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt_no_CJK.dat.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/icudt_no_CJK.dat",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/icudt_no_CJK.dat"
-    },
-    {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/7gyuh8ebk4.gz",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
@@ -5470,6 +5508,25 @@
       "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/Microsoft.VisualBasic.wasm"
     },
     {
+      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/8obd54lo50.gz",
+      "SourceId": "TravelPlanner",
+      "SourceType": "Computed",
+      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Refit.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/Refit.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/Refit.wasm"
+    },
+    {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/8ovvqaqbnd.gz",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
@@ -5565,6 +5622,25 @@
       "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/System.Globalization.Extensions.wasm"
     },
     {
+      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/9mi2wisv8l.gz",
+      "SourceId": "TravelPlanner",
+      "SourceType": "Computed",
+      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.runtime.js.map.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.runtime.js.map",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.runtime.js.map"
+    },
+    {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/9vlzaudoqy.gz",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
@@ -5601,6 +5677,63 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/System.Private.Xml.Linq.wasm"
+    },
+    {
+      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/ak553w96vj.gz",
+      "SourceId": "TravelPlanner",
+      "SourceType": "Computed",
+      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.native.8.0.3.ak553w96vj.js.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.native.8.0.3.ak553w96vj.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.native.8.0.3.ak553w96vj.js"
+    },
+    {
+      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/aq9d0lr4wu.gz",
+      "SourceId": "TravelPlanner",
+      "SourceType": "Computed",
+      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.native.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.native.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.native.wasm"
+    },
+    {
+      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/b85ar3xvhg.gz",
+      "SourceId": "TravelPlanner",
+      "SourceType": "Computed",
+      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.runtime.8.0.3.b85ar3xvhg.js.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.runtime.8.0.3.b85ar3xvhg.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.runtime.8.0.3.b85ar3xvhg.js"
     },
     {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/b9u4s3tiau.gz",
@@ -5660,25 +5793,6 @@
       "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/System.Net.WebClient.wasm"
     },
     {
-      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/c1jtzasajt.gz",
-      "SourceId": "TravelPlanner",
-      "SourceType": "Computed",
-      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt_CJK.dat.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/icudt_CJK.dat",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/icudt_CJK.dat"
-    },
-    {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/c7b2w7r1do.gz",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
@@ -5734,25 +5848,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/System.Net.Mail.wasm"
-    },
-    {
-      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/co5u1vas9i.gz",
-      "SourceId": "TravelPlanner",
-      "SourceType": "Computed",
-      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.runtime.8.0.1.co5u1vas9i.js.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.runtime.8.0.1.co5u1vas9i.js",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.runtime.8.0.1.co5u1vas9i.js"
     },
     {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/cy605aktfx.gz",
@@ -6230,25 +6325,6 @@
       "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/Google.Apis.wasm"
     },
     {
-      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/h2ftxk9a4x.gz",
-      "SourceId": "TravelPlanner",
-      "SourceType": "Computed",
-      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.native.8.0.1.h2ftxk9a4x.js.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.native.8.0.1.h2ftxk9a4x.js",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.native.8.0.1.h2ftxk9a4x.js"
-    },
-    {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/h34mdptdmh.gz",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
@@ -6496,6 +6572,25 @@
       "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/System.Text.Encoding.wasm"
     },
     {
+      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/j872meh26i.gz",
+      "SourceId": "TravelPlanner",
+      "SourceType": "Computed",
+      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/Google.Maps.Places.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/Google.Maps.Places.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/Google.Maps.Places.wasm"
+    },
+    {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/jfa1nsd6o4.gz",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
@@ -6648,6 +6743,25 @@
       "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/System.Management.wasm"
     },
     {
+      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/kdecznx8eo.gz",
+      "SourceId": "TravelPlanner",
+      "SourceType": "Computed",
+      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.js.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.js"
+    },
+    {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/keh8ew7sp6.gz",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
@@ -6781,6 +6895,25 @@
       "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/System.Security.Cryptography.OpenSsl.wasm"
     },
     {
+      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/kyikx08s3z.gz",
+      "SourceId": "TravelPlanner",
+      "SourceType": "Computed",
+      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/GooglePlacesApi.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/GooglePlacesApi.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/GooglePlacesApi.wasm"
+    },
+    {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/l11hvtj1gn.gz",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
@@ -6893,6 +7026,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/System.Net.wasm"
+    },
+    {
+      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/medg8pqlja.gz",
+      "SourceId": "TravelPlanner",
+      "SourceType": "Computed",
+      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt_EFIGS.dat.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/icudt_EFIGS.dat",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/icudt_EFIGS.dat"
     },
     {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/mh3z8jx0im.gz",
@@ -7769,6 +7921,25 @@
       "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/System.Net.NameResolution.wasm"
     },
     {
+      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/smemnw5ixh.gz",
+      "SourceId": "TravelPlanner",
+      "SourceType": "Computed",
+      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt_no_CJK.dat.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/icudt_no_CJK.dat",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/icudt_no_CJK.dat"
+    },
+    {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/t99a7mtz47.gz",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
@@ -8073,6 +8244,25 @@
       "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/System.Diagnostics.FileVersionInfo.wasm"
     },
     {
+      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/ukr2xvqvb1.gz",
+      "SourceId": "TravelPlanner",
+      "SourceType": "Computed",
+      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "_framework/GooglePlacesApi.Abstractions.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/GooglePlacesApi.Abstractions.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/GooglePlacesApi.Abstractions.wasm"
+    },
+    {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/ulnbttn4ky.gz",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
@@ -8166,25 +8356,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/System.Net.ServicePoint.wasm"
-    },
-    {
-      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/vyudjxnmkp.gz",
-      "SourceId": "TravelPlanner",
-      "SourceType": "Computed",
-      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.js.map.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.js.map",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.js.map"
     },
     {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/wmds5kohb3.gz",
@@ -8299,25 +8470,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/System.Security.Cryptography.Csp.wasm"
-    },
-    {
-      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/y7jguootjj.gz",
-      "SourceId": "TravelPlanner",
-      "SourceType": "Computed",
-      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.native.wasm.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.native.wasm",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "/home/kuba/TravelPlanner/TravelPlanner/bin/Debug/net8.0/wwwroot/_framework/dotnet.native.wasm"
     },
     {
       "Identity": "/home/kuba/TravelPlanner/TravelPlanner/obj/Debug/net8.0/compressed/ydix446e1i.gz",
@@ -8793,25 +8945,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/index.html"
-    },
-    {
-      "Identity": "/home/kuba/TravelPlanner/TravelPlanner/wwwroot/sample-data/weather.json",
-      "SourceId": "TravelPlanner",
-      "SourceType": "Discovered",
-      "ContentRoot": "/home/kuba/TravelPlanner/TravelPlanner/wwwroot/",
-      "BasePath": "/",
-      "RelativePath": "sample-data/weather.json",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/sample-data/weather.json"
     }
   ]
 }
