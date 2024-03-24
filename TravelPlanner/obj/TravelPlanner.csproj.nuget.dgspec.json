@@ -58,6 +58,14 @@
               "target": "Package",
               "version": "[5.3.1, )"
             },
+            "GoogleMapsCore.Places": {
+              "target": "Package",
+              "version": "[0.0.1.1, )"
+            },
+            "GooglePlacesApi": {
+              "target": "Package",
+              "version": "[1.0.17, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
               "version": "[8.0.1, )"
@@ -70,13 +78,13 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.1, )",
+              "version": "[8.0.2, )",
               "autoReferenced": true
             },
             "Microsoft.NET.Sdk.WebAssembly.Pack": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.1, )",
+              "version": "[8.0.3, )",
               "autoReferenced": true
             },
             "MudBlazor": {
@@ -98,11 +106,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.1, 8.0.1]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[8.0.1, 8.0.1]"
+              "version": "[8.0.2, 8.0.2]"
             }
           ],
           "frameworkReferences": {
@@ -110,7 +114,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.102/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
