@@ -1,16 +1,9 @@
-@page "/call-web-api"
+@page "/"
 @using System.Text.Json
 @using System.Text.Json.Serialization
-@using global::GoogleApi
-@using global::GoogleApi.Entities.Places.Details.Request
-@using Google.Apis.Auth
-@using Google.Apis.Auth.OAuth2.Flows
-@using Google.Apis.Auth.OAuth2.Web
-@using Google.Apis.Http
-@using GoogleMapsComponents.Maps.Places
 <h1>Call web API from a Blazor Server Razor component</h1>
 
-@if (getBranchesError || places is null)
+@if (_getBranchesError || places is null)
 {
     <p>Unable to get data from HTTP response.</p>
 }
@@ -26,29 +19,37 @@ else
 
 @code {
     private IEnumerable<PlaceName>? places = [];
-    private bool getBranchesError;
-    private bool shouldRender;
-    string APIKEY = "";
-    protected override bool ShouldRender() => shouldRender;
+    private bool _getBranchesError;
+    private bool _shouldRender;
+    const string _apikey = "";
+    protected override bool ShouldRender() => _shouldRender;
 
     protected override async Task OnInitializedAsync()
     {
         var client = new HttpClient();
-        var test = new GooglePlaces.DetailsApi(client);
-        var placesDetailsResponse = test.QueryAsync(new PlacesDetailsRequest());
-        var response =  client.GetAsync("https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJjVT5hPmhFkcRKiKV4cWZePY&key=" + APIKEY); ;
+        //client.BaseAddress = new Uri("https://places.googleapis.com/v1/places/");
+        client.BaseAddress = new Uri("https://places.googleapis.com/v1/");
+        client.DefaultRequestHeaders.Add("accept", "application/json");
+        client.DefaultRequestHeaders.Add("X-Goog-Api-Key", _apikey);
+        client.DefaultRequestHeaders.Add("X-Goog-FieldMask", "places.displayName,places.formattedAddress");
         
-        if (response.IsCompleted)
+        var response = await client.PostAsJsonAsync("./places:searchText",  new { textQuery = "hotele bielsko" });
+        if (response.IsSuccessStatusCode)
         {
-            string jsonString = response.Result.ToString();
-            Console.WriteLine(jsonString); 
-            Console.WriteLine("nice");
+            var getContent = await response.Content.ReadAsStringAsync();
+            var jsonString = JsonDocument.Parse(getContent);
+            var rootPlaces = jsonString.RootElement.GetProperty("places");
+            for (int i = 0; i < rootPlaces.GetArrayLength(); i++)
+            {
+               Console.WriteLine(rootPlaces[i].GetProperty("displayName").ToString());
+                i++;
+            }
         }
         else
         {
-            getBranchesError = true;
+            _getBranchesError = true;
         }
-        shouldRender = true;
+        _shouldRender = true;
     }
 
     public class PlaceName
