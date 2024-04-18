@@ -1,6 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelPlanner", "TravelPlanner\TravelPlanner.csproj", "{D3B04369-FC06-487E-ACA3-E2426D6EE3AB}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34616.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelPlanner", "TravelPlanner\TravelPlanner.csproj", "{D3B04369-FC06-487E-ACA3-E2426D6EE3AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +15,11 @@ Global
 		{D3B04369-FC06-487E-ACA3-E2426D6EE3AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3B04369-FC06-487E-ACA3-E2426D6EE3AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3B04369-FC06-487E-ACA3-E2426D6EE3AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C70D8BC-D21B-4568-9FC6-91ABD6763992}
 	EndGlobalSection
 EndGlobal
