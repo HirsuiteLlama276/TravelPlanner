@@ -3,6 +3,7 @@
 @using System.Net.Http.Json
 @using Newtonsoft.Json.Linq
 @using MudBlazor
+@using System.Text.Json
 <MudPopoverProvider></MudPopoverProvider>
 <head>
     <style>
@@ -107,11 +108,7 @@
     string selectedPlaceImageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/City_Hall_of_Mountain_View_-_panoramio_-_Aleh_Haiko_%281%29.jpg/1280px-City_Hall_of_Mountain_View_-_panoramio_-_Aleh_Haiko_%281%29.jpg";
     string selectedPlaceImageUrl1 = "https://t3.ftcdn.net/jpg/00/44/42/72/240_F_44427234_B4bGy5FOAxxyaQ4nK6BYSZbkPyfa2ii3.jpg";
 
-    private string[] countryData =
-    {
-        "1Country", "2Country", "3Country", "4Country",
-        "5Country", "6Country", "7Country", "8Country",
-    };
+    private string[] countryData = new string[5];
     private string[] cityData =
     {
         "New Hampshire", "New Jersey", "New Mexico", "New York",
@@ -125,15 +122,24 @@
 
     private async Task<IEnumerable<string>> SearchCountry(string searchText)
     {
-        // Zmienić na wczytywanie poszczegolnych danych z api
-        if (string.IsNullOrEmpty(searchText))
+        var client = new myHttpClient();
+        countryData = new string[5];
+        client.AddHeader("X-Goog-FieldMask", "places.displayName,places.formattedAddress,places.photos");
+        var response = await client.SearchForHotel(searchText);
+        if (response.IsSuccessStatusCode)
         {
-            return countryData;
+            var jsonString = await response.Content.ReadFromJsonAsync<JsonDocument>();
+            if (jsonString != null)
+            {
+                var rootPlaces = jsonString.RootElement.GetProperty("places");
+                for (int i = 0; i < 5; i++)
+                {
+                    countryData[i] = rootPlaces[i].GetProperty("displayName").GetProperty("text").ToString();
+                    i++;
+                }
+            }
         }
-        else
-        {
-            return countryData.Where(x => x.Contains(searchText, StringComparison.InvariantCultureIgnoreCase));
-        }
+        return countryData;
     }
 
     private async Task<IEnumerable<string>> SearchCity(string searchText)
