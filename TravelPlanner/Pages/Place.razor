@@ -8,7 +8,7 @@
 <head>
     <style>
         .mud-autocomplete-input, .mud-list {
-            background-color: white;
+            background-color: lightblue;
         }
 
         .mud-popover {
@@ -18,6 +18,24 @@
         .header-gradient {
             background: linear-gradient(180deg, rgba(36, 122, 218, 0.79) 0%, rgba(30, 188, 84, 0.79) 100%);
             text-align: center;
+        }
+
+        .gradient-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            background: linear-gradient(180deg, rgba(36, 122, 218, 0.79) 0%, rgba(30, 188, 84, 0.79) 100%);
+        }
+
+        .center-content {
+            display: flex;
+            justify-content: center;
+            width: 100%; 
+        }
+
+        .full-width {
+            width: 100%;
         }
     </style>
 </head>
@@ -30,7 +48,7 @@
         }
     }
     window.onload = adjustDescriptionWidth;
-    window.onresize = adjustDescriptionWidth;  
+    window.onresize = adjustDescriptionWidth;
 </script>
 
 <PageTitle>Place</PageTitle>
@@ -39,64 +57,45 @@
     <h1 style="color: white; padding: 20px 0;">Travel Planner</h1>
 </div>
 
-<MudGrid Spacing="1">
-    <MudItem>
-        <MudPaper class="rounded-3" Width="400px" Height="400px" Style="background-color: lightblue">
-            <MudContainer MaxWidth="MaxWidth.Small">
-                <MudStack Spacing="1" >
-                    <MudText Typo="Typo.h1" Style="font-size:25px; font-weight:700; margin-top: 30px; 
-                               text-align:center;">Wybierz cel podróży</MudText>
-                    <MudAutocomplete T="string" Label="Country" Value="@Country"
-                                     ValueChanged="@CountryValueChanged"
-                                     SearchFunc="@SearchCountry" Variant="Variant.Filled"
-                                     ResetValueOnEmptyText=true
-                                     Style="background-color:white; margin-top: 40px;" />
-                    <MudAutocomplete T="string" Label="City" Value="@City" ValueChanged="@CityValueChanged" SearchFunc="@SearchCity"
-                                     Variant="Variant.Filled" Style="background-color:white;"
-                                     ResetValueOnEmptyText=true
-                                     ReadOnly=@country_empty />
-                    <MudAutocomplete T="string" Label="Hotel" Value="@HotelName" ValueChanged="@HotelValueChanged" SearchFunc="@SearchHotel"
-                                     Variant="Variant.Filled" Style="background-color:white;"
-                                     ResetValueOnEmptyText=true
-                                     ReadOnly=@city_empty />
-                </MudStack>
-            </MudContainer>
-        </MudPaper>
-    </MudItem>
-    <MudItem xs="8">
-        <MudPaper class="rounded-3" Height="100%" Style="background-color: lightblue;">
-            <MudCardContent>
-                <div style="width: 100%; height: 100%; position: relative; text-align: center;">
-                    <div style="width: 100%; height: 100px; background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,123,255,1) 100%);
-                        text-align: center; display: flex; align-items: center;
-                        justify-content: center; display: @(string.IsNullOrEmpty(selectedPlaceImageUrl) ? "flex" : "none");">
-                        <p style="font-size: 24px; color: white;">Gdzie się zatrzymasz?</p>
-                    </div>
-                    @if (!string.IsNullOrEmpty(selectedPlaceImageUrl))
-                    {
-                        <div style="text-align: center;">
-                            <div style="display: inline-block; max-width: 100%; overflow: hidden;">
-                                <img src="@selectedPlaceImageUrl" id="selectedImage" alt="Selected Place" style="width: 100%; min-width:700px; height: auto; max-height: 500px; object-fit: contain;" onload="adjustDescriptionWidth()" />
-                            </div>
-                            <div id="selectedDescription" style="text-align: center; margin: 20px auto 0 auto; width: fit-content;">
-                                <p style="word-wrap: break-word;">@selectedPlaceDescription</p>
-                            </div>
-                        </div>
-                    }
-                </div>
-            </MudCardContent>
+<div>
+    <MudAutocomplete T="string" Label="Wyszukaj miasto lub hotel" Value="@Country"
+                     ValueChanged="@CountryValueChanged"
+                     SearchFunc="@SearchCountry" Variant="Variant.Filled"
+                     ResetValueOnEmptyText=true
+                     Style="background-color:lightblue; width:100%" />
 
-        </MudPaper>
-    </MudItem>
-</MudGrid>
+    <div class="gradient-container center-content">
+        <MudGrid Spacing="1" Style="margin-top: 10px; width: 80%;">
+            <MudItem xs="12">
+                <MudPaper class="rounded-3" Height="100%" Style="background-color: lightblue;">
+                    <MudCardContent>
+                        <div style="width: 100%; height: 100%; position: relative; text-align: center;">
+                            <div style="width: 100%; height: 100px; background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,123,255,1) 100%);
+                                text-align: center; display: flex; align-items: center;
+                                justify-content: center; display: @(string.IsNullOrEmpty(selectedPlaceImageUrl) ? "flex" : "none");">
+                                <p style="font-size: 24px; color: white;">Gdzie się zatrzymasz?</p>
+                            </div>
+                            @if (!string.IsNullOrEmpty(selectedPlaceImageUrl))
+                            {
+                                <div style="text-align: center;">
+                                    <div style="display: inline-block; max-width: 100%; overflow: hidden;">
+                                        <img src="@selectedPlaceImageUrl" id="selectedImage" alt="Selected Place" style="width: 100%; min-width:700px; height: auto; max-height: 500px; object-fit: contain;" onload="adjustDescriptionWidth()" />
+                                    </div>
+                                    <div id="selectedDescription" style="text-align: center; margin: 20px auto 0 auto; width: fit-content;">
+                                        <p style="word-wrap: break-word;">@selectedPlaceDescription</p>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </MudCardContent>
+                </MudPaper>
+            </MudItem>
+        </MudGrid>
+    </div>
+</div>
 
 @code {
-    public string City;
-    public string HotelName;
     public string Country;
-
-    //zmienne pomocnicze czyszczenia autocomplete
-    public bool country_empty=true, city_empty=true;
 
     //zmienna dla opisu hotelu 
 
@@ -109,16 +108,6 @@
     string selectedPlaceImageUrl1 = "https://t3.ftcdn.net/jpg/00/44/42/72/240_F_44427234_B4bGy5FOAxxyaQ4nK6BYSZbkPyfa2ii3.jpg";
 
     private string[] countryData = new string[5];
-    private string[] cityData =
-    {
-        "New Hampshire", "New Jersey", "New Mexico", "New York",
-        "Warsaw", "Kraków", "Wieliczka"
-    };
-    private string[] hotelData =
-    {
-        "Qubus", "Alpin", "hotel3", "hotel4",
-        "Prezydent", "hotel6", "hotel5"
-    };
 
     private async Task<IEnumerable<string>> SearchCountry(string searchText)
     {
@@ -142,59 +131,11 @@
         return countryData;
     }
 
-    private async Task<IEnumerable<string>> SearchCity(string searchText)
-    {
-        // Zmienić na wczytywanie poszczegolnych danych z api
-        if (string.IsNullOrEmpty(searchText))
-        {
-            return cityData;
-        }
-        else
-        {
-            return cityData.Where(x => x.Contains(searchText, StringComparison.InvariantCultureIgnoreCase));
-        }
-    }
-    private async Task<IEnumerable<string>> SearchHotel(string searchText)
-    {
-        // Zmienić na wczytywanie poszczegolnych danych z api
-        if (string.IsNullOrEmpty(searchText))
-        {
-            return hotelData;
-        }
-        else
-        {
-            return hotelData.Where(x => x.Contains(searchText, StringComparison.InvariantCultureIgnoreCase));
-        }
-    }
-
     //obsluga funkcji pol autocomplete
 
     private void CountryValueChanged(string newValue)
     {
         Country = newValue;
-        country_empty = string.IsNullOrEmpty(newValue);
-        HotelName = "";
-        City = "";
-        if(string.IsNullOrEmpty(newValue))
-        {
-            city_empty = true;
-            country_empty = true;
-        }
-    }
-    private void CityValueChanged(string newValue)
-    {
-        City = newValue;
-        city_empty = string.IsNullOrEmpty(newValue);
-        HotelName = "";
-        if (string.IsNullOrEmpty(newValue))
-        {
-            city_empty = true;
-        }
-    }
-
-    private void HotelValueChanged(string newValue)
-    {
-        HotelName = newValue;
     }
 
     protected override async Task OnInitializedAsync()

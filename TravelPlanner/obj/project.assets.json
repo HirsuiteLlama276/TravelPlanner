@@ -740,7 +740,7 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "Microsoft.NET.Sdk.WebAssembly.Pack/8.0.3": {
+      "Microsoft.NET.Sdk.WebAssembly.Pack/8.0.2": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.Sdk.WebAssembly.Pack.props": {},
@@ -3136,7 +3136,7 @@
           "build/Microsoft.NET.ILLink.Tasks.props": {}
         }
       },
-      "Microsoft.NET.Sdk.WebAssembly.Pack/8.0.3": {
+      "Microsoft.NET.Sdk.WebAssembly.Pack/8.0.2": {
         "type": "package",
         "build": {
           "build/Microsoft.NET.Sdk.WebAssembly.Pack.props": {},
@@ -6042,10 +6042,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.NET.Sdk.WebAssembly.Pack/8.0.3": {
-      "sha512": "n4TvjyvxuumcFKarFlUworNlgpelbE/RgUgh0A2v9hHd9uYbIhVm3DXFrs1C8J+q4iLQ1vj2RNBkOl5pBK7zFw==",
+    "Microsoft.NET.Sdk.WebAssembly.Pack/8.0.2": {
+      "sha512": "sq7Zs4E699WDIbFloiK/qmp9JtL8vpzMGILjnzYjkY4O1qj6z1Iu36dl4xWXrkVsKDnxw8CZ7NDqsntq5FFPgg==",
       "type": "package",
-      "path": "microsoft.net.sdk.webassembly.pack/8.0.3",
+      "path": "microsoft.net.sdk.webassembly.pack/8.0.2",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -6073,7 +6073,7 @@
         "build/Microsoft.NET.Sdk.WebAssembly.Pack.props",
         "build/Microsoft.NET.Sdk.WebAssembly.Pack.targets",
         "build/Wasm.web.config",
-        "microsoft.net.sdk.webassembly.pack.8.0.3.nupkg.sha512",
+        "microsoft.net.sdk.webassembly.pack.8.0.2.nupkg.sha512",
         "microsoft.net.sdk.webassembly.pack.nuspec",
         "tools/net472/Microsoft.Bcl.AsyncInterfaces.dll",
         "tools/net472/Microsoft.Build.dll",
@@ -10559,30 +10559,37 @@
       "Microsoft.AspNetCore.Components.WebAssembly >= 8.0.1",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 8.0.1",
       "Microsoft.NET.ILLink.Tasks >= 8.0.2",
-      "Microsoft.NET.Sdk.WebAssembly.Pack >= 8.0.3",
+      "Microsoft.NET.Sdk.WebAssembly.Pack >= 8.0.2",
       "MongoDB.Driver >= 2.25.0",
       "MudBlazor >= 6.16.0"
     ]
   },
   "packageFolders": {
-    "/home/kuba/.nuget/packages/": {}
+    "C:\\Users\\48519\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/kuba/TravelPlanner/TravelPlanner/TravelPlanner.csproj",
+      "projectUniqueName": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\TravelPlanner.csproj",
       "projectName": "TravelPlanner",
-      "projectPath": "/home/kuba/TravelPlanner/TravelPlanner/TravelPlanner.csproj",
-      "packagesPath": "/home/kuba/.nuget/packages/",
-      "outputPath": "/home/kuba/TravelPlanner/TravelPlanner/obj/",
+      "projectPath": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\TravelPlanner.csproj",
+      "packagesPath": "C:\\Users\\48519\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/home/kuba/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\48519\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -10595,6 +10602,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -10647,7 +10659,7 @@
           "Microsoft.NET.Sdk.WebAssembly.Pack": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[8.0.3, )",
+            "version": "[8.0.2, )",
             "autoReferenced": true
           },
           "MongoDB.Driver": {
@@ -10672,7 +10684,7 @@
         "warn": true,
         "downloadDependencies": [
           {
-            "name": "Microsoft.AspNetCore.App.Ref",
+            "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
             "version": "[8.0.2, 8.0.2]"
           }
         ],
@@ -10681,7 +10693,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.102/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
