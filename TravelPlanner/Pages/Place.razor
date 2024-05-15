@@ -4,7 +4,9 @@
 @using Newtonsoft.Json.Linq
 @using MudBlazor
 @using System.Text.Json
+
 <MudPopoverProvider></MudPopoverProvider>
+
 <head>
     <style>
         .mud-autocomplete-input, .mud-list {
@@ -31,14 +33,37 @@
         .center-content {
             display: flex;
             justify-content: center;
-            width: 100%; 
+            width: 100%;
         }
 
         .full-width {
             width: 100%;
         }
+
+        .date-picker-zindex {
+            z-index: 1600 !important;
+        }
+
+        .mud-picker-container {
+            background: linear-gradient(180deg, rgba(36, 122, 218, 1) 0%, rgba(30, 188, 84, 1) 100%);
+        }
+
+        .mud-picker-calendar .mud-day.mud-range.mud-range-between {
+            border-radius: 0;
+            background-color: dodgerblue;
+        }
+
+        .mud-picker-calendar .mud-day.mud-range.mud-range-start-selected {
+            background-color: dodgerblue !important;
+        }
+
+        .mud-picker-calendar .mud-day.mud-range.mud-range-end-selected {
+            background-color: dodgerblue !important;
+        }
+
     </style>
 </head>
+
 <script>
     function adjustDescriptionWidth() {
         var image = document.getElementById('selectedImage');
@@ -58,13 +83,39 @@
 </div>
 
 <div>
-    <MudAutocomplete T="string" Label="Wyszukaj miasto lub hotel" Value="@Country"
-                     ValueChanged="@CountryValueChanged"
-                     SearchFunc="@SearchCountry" Variant="Variant.Filled"
-                     ResetValueOnEmptyText=true
-                     Style="background-color:lightblue; width:100%" />
+    <div>
+        <MudGrid>
+            <MudItem xs="12" md="5">
+                <MudAutocomplete T="string" Label="Wyszukaj miasto lub hotel" Value="@Country"
+                                 ValueChanged="@CountryValueChanged"
+                                 SearchFunc="@SearchCountry" Variant="Variant.Filled"
+                                 ResetValueOnEmptyText=true
+                                 Style="background-color: lightblue; width: 100%;" />
+            </MudItem>
+            <MudItem xs="12" md="6">
+                <MudPaper Style="background-color:lightblue; height:91%; width:100%; margin-top:6px; 
+                            margin-left:-10px">
+                    <MudDateRangePicker PickerVariant="PickerVariant.Dialog" @bind-DateRange="@_dateRange"
+                                        Margin="Margin.Dense" Style="width: 90%; height=90px;
+                                         margin-left:10px; margin-right:10%;
+                                        background-color: lightblue; "
+                                        PlaceholderStart="Start Date" PlaceholderEnd="End Date"
+                                        Class="date-picker-zindex" />
+                </MudPaper>
+            </MudItem>
+            <MudItem xs="12" md="1">
+                <MudButton Variant="Variant.Filled"
+                           OnClick="OnSubmitClick" EndIcon="@Icons.Material.Filled.Add"
+                           Style="height:90%; width:120%;  
+                                    margin-top:6px; margin-left:-20px; 
+                                    background-color: dodgerblue; border-radius:5%">
+                    Zatwierdź
+                </MudButton>
+            </MudItem>
+        </MudGrid>
+    </div>
 
-    <div class="gradient-container center-content">
+    <div class="gradient-container center-content ">
         <MudGrid Spacing="1" Style="margin-top: 10px; width: 80%;">
             <MudItem xs="12">
                 <MudPaper class="rounded-3" Height="100%" Style="background-color: lightblue;">
@@ -97,15 +148,20 @@
 @code {
     public string Country;
 
-    //zmienna dla opisu hotelu 
+    //Zakres dni podrozy
+
+    private DateRange _dateRange { get; set; }
+
+    //zmienna dla opisu hotelu
 
     string selectedPlaceDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
     "Ut porta molestie lorem ac mattis. Nunc cursus quis nibh eget iaculis.";
 
     //adres url obrazu z api
 
-    string selectedPlaceImageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/City_Hall_of_Mountain_View_-_panoramio_-_Aleh_Haiko_%281%29.jpg/1280px-City_Hall_of_Mountain_View_-_panoramio_-_Aleh_Haiko_%281%29.jpg";
+    string selectedPlaceImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/City_Hall_of_Mountain_View_-_panoramio_-_Aleh_Haiko_%281%29.jpg/1280px-City_Hall_of_Mountain_View_-_panoramio_-_Aleh_Haiko_%281%29.jpg";
     string selectedPlaceImageUrl1 = "https://t3.ftcdn.net/jpg/00/44/42/72/240_F_44427234_B4bGy5FOAxxyaQ4nK6BYSZbkPyfa2ii3.jpg";
+    string selectedPlaceImageUrl3 = "";
 
     private string[] countryData = new string[5];
 
@@ -136,6 +192,26 @@
     private void CountryValueChanged(string newValue)
     {
         Country = newValue;
+    }
+
+    private void OnSubmitClick()
+    {
+        //Test działania kalendarza oraz MudButton
+        //Kod do usuniecia
+        // Dodaj przejscie na strone z dodawaniem kolejnych dni(edycja podrozy)
+
+        if (_dateRange != null && _dateRange.Start.HasValue && _dateRange.End.HasValue)
+        {
+            var startDate = _dateRange.Start.Value.ToString("dd-MM-yyyy");
+            var endDate = _dateRange.End.Value.ToString("dd-MM-yyyy");
+
+            // Dodanie dat do opisu miejsca
+            selectedPlaceDescription += $"{startDate} do {endDate}";
+        }
+        else
+        {
+            selectedPlaceDescription += " Date invalid or empty";
+        }
     }
 
     protected override async Task OnInitializedAsync()

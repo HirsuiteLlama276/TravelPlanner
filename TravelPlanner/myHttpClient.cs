@@ -5,7 +5,7 @@ namespace TravelPlanner;
 public class myHttpClient: HttpClient
 {
     private HttpClient _client = new HttpClient();
-    private const string GetApiKey = "AIzaSyA_OfpozKjY1_NJFqjqsC50nfc39cwNCsk";
+    private const string GetApiKey = "";
 
     public void AddHeader(string name, string value)
     {
