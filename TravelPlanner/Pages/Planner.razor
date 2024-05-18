@@ -1,0 +1,237 @@
+﻿@page "/planner"
+@inject HttpClient Http
+@inject TravelDataMigration TravelData
+@inject NavigationManager Navigation
+@using MudBlazor
+@using System.Text.Json
+@using System.Collections.Generic
+
+<MudPopoverProvider></MudPopoverProvider>
+<MudDialogProvider></MudDialogProvider>
+
+<head>
+    <style>
+        .header-gradient {
+            background: linear-gradient(180deg, rgba(36, 122, 218, 0.79) 0%, rgba(30, 188, 84, 0.79) 100%);
+            text-align: center;
+        }
+
+        .gradient-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            background: linear-gradient(180deg, rgba(36, 122, 218, 0.79) 0%, rgba(30, 188, 84, 0.79) 100%);
+        }
+
+        .center-content {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .full-width {
+            width: 100%;
+        }
+
+        .date-picker-zindex {
+            z-index: 1600 !important;
+        }
+
+        .mud-picker-container {
+            background: linear-gradient(180deg, rgba(36, 122, 218, 1) 0%, rgba(30, 188, 84, 1) 100%);
+        }
+
+        .mud-picker-calendar .mud-day.mud-range.mud-range-between {
+            border-radius: 0;
+            background-color: dodgerblue;
+        }
+
+        .mud-picker-calendar .mud-day.mud-range.mud-range-start-selected {
+            background-color: dodgerblue !important;
+        }
+
+        .mud-picker-calendar .mud-day.mud-range.mud-range-end-selected {
+            background-color: dodgerblue !important;
+        }
+
+        .description-field {
+            margin-bottom: 16px;
+            border: 2px solid dodgerblue;
+            border-radius: 4px;
+            padding: 8px;
+        }
+
+        .description-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            margin-top: 16px;
+        }
+
+        .date-label {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<PageTitle>Planner</PageTitle>
+
+<div class="header-gradient">
+    <h1 style="color: white; padding: 20px 0;">Travel Planner</h1>
+</div>
+
+<div class="gradient-container center-content full-width">
+    @if (showDatePicker)
+    {
+        <MudGrid Spacing="1" Style="margin-top: 10px; width: 80%;">
+            <MudItem xs="12" md="6">
+                <MudPaper Style="background-color:lightblue; padding: 16px;">
+                    <MudDateRangePicker PickerVariant="PickerVariant.Dialog" @bind-DateRange="_dateRange"
+                                        Margin="Margin.Dense" Style="width: 100%; background-color: lightblue;"
+                                        PlaceholderStart="Start Date" PlaceholderEnd="End Date"
+                                        Class="date-picker-zindex" />
+                    <MudButton Variant="Variant.Filled" OnClick="OnDateRangeSubmit"
+                               Style="margin-top: 16px; background-color: dodgerblue;">
+                        Zatwierdź lub zmień zakres dat
+                    </MudButton>
+                </MudPaper>
+            </MudItem>
+        </MudGrid>
+    }
+
+    <MudGrid Spacing="1" Style="margin-top: 10px; width: 80%;">
+        <MudItem xs="12">
+            <MudPaper Style="background-color: lightblue; padding: 16px;">
+                @if (daysDescriptions.Count > 0)
+                {
+                    <div class="description-container">
+                        <div class="date-label">@currentDay</div>
+                        <div class="description-field" style="width: 100%;">
+                            <MudTextField @bind-Value="currentDescription" Placeholder="Wprowadź opis (max 200 znaków)"
+                                          Variant="Variant.Filled" Lines="5" MaxLength="300"
+                                          ReadOnly="@IsSaveButtonDisabled"
+                                          Style="width: 100%; background-color: lightblue; white-space: pre-wrap;" />
+                        </div>
+                        <div class="button-container">
+                            @if (!IsSaveButtonDisabled)
+                            {
+                                <MudButton Variant="Variant.Filled" OnClick="OnSaveDescription"
+                                           Disabled="@(IsSaveButtonDisabled)"
+                                           Style="background-color: dodgerblue;">
+                                    Zapisz opis i przejdź do następnego dnia
+                                </MudButton>
+                            }
+                            else
+                            {
+                                <MudButton Variant="Variant.Filled" OnClick="OnSaveAll"
+                                           Disabled="@(!IsSaveButtonDisabled)"
+                                           Style="background-color: dodgerblue;">
+                                    Zapisz podróż i wyjdź
+                                </MudButton>
+                            }
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <p>Zatwierdź lub zmień zakres dat, aby dodać opisy dla poszczególnych dni.</p>
+                }
+            </MudPaper>
+        </MudItem>
+    </MudGrid>
+</div>
+
+@code {
+
+    [Inject] private IDialogService DialogService { get; set; }
+    private DateRange _dateRange { get; set; }
+    private List<DayDescription> daysDescriptions = new List<DayDescription>();
+    private int currentDayIndex = 0;
+    private string currentDescription = string.Empty;
+    private bool showDatePicker = true;
+
+    private string currentDay => daysDescriptions.Count > 0 && currentDayIndex < daysDescriptions.Count ? daysDescriptions[currentDayIndex].Date.ToString("dd-MM-yyyy") : string.Empty;
+
+    private bool IsSaveButtonDisabled => currentDayIndex >= daysDescriptions.Count;
+
+    // Data range from /place
+    protected override void OnInitialized()
+    {
+        _dateRange = TravelData.SelectedDateRange;
+    }
+
+    private void OnDateRangeSubmit()
+    {
+        try
+        {
+            daysDescriptions.Clear();
+            currentDescription = string.Empty;
+            currentDayIndex = 0;
+
+            if (_dateRange != null && _dateRange.Start.HasValue && _dateRange.End.HasValue)
+            {
+                var currentDate = _dateRange.Start.Value;
+
+                while (currentDate <= _dateRange.End.Value)
+                {
+                    daysDescriptions.Add(new DayDescription
+                        {
+                            Date = currentDate,
+                            Description = string.Empty
+                        });
+                    currentDate = currentDate.AddDays(1);
+                }
+
+                showDatePicker = false;
+            }
+        }
+        catch (Exception ex)
+        {
+
+        }
+    }
+
+    private void OnSaveDescription()
+    {
+        try
+        {
+            if (currentDayIndex < daysDescriptions.Count && !string.IsNullOrWhiteSpace(currentDescription))
+            {
+                daysDescriptions[currentDayIndex].Description = currentDescription;
+                currentDescription = string.Empty;
+                currentDayIndex++;
+
+                if (currentDayIndex >= daysDescriptions.Count)
+                {
+                    currentDayIndex = daysDescriptions.Count;
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+
+        }
+    }
+
+    private void OnSaveAll()
+    {
+        // dodać obsługę zapisu podróży do bazy danych
+        Navigation.NavigateTo("/Place");
+    }
+
+    private class DayDescription
+    {
+        public DateTime Date { get; set; }
+        public string Description { get; set; }
+    }
+}

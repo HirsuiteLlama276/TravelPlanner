@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "TravelPlanner",
   "resources": {
-    "hash": "sha256-ihSr3JPmxGjreKi1YqQJ2reHgzn/dZpCN8EB32h5Y2U=",
+    "hash": "sha256-lsmNua+IJuHf7LXUcgbol0FASBjA1Miv4lW9qJ4IpB0=",
     "jsModuleNative": {
       "dotnet.native.8.0.2.8fe5lgi5g0.js": "sha256-gPMK16QWoJSTxorlZJqcVtbBRTniIQWlLsJN2O4cJHg="
     },
@@ -240,10 +240,10 @@
       "mscorlib.wasm": "sha256-EpWTfh4m/hEcXRFYMCR9YeYHwdUJgcm1laBaxWfq2S4=",
       "netstandard.wasm": "sha256-2kH24/YfHmU3B4eYRyRmiwebYROM4+B9eDWKvMnUdP8=",
       "System.Private.CoreLib.wasm": "sha256-CsySKiP7HYY1pS8LTDE60EkqiX5oHb3WoEZHDNd1yK0=",
-      "TravelPlanner.wasm": "sha256-ylcrmO3Dhu7ZyAkmndpIA9CwWVk5P2AeoNG0XiWBhNs="
+      "TravelPlanner.wasm": "sha256-BDTQT5E+v9AV+aqeDR5mEMjRJx/biPvHDgt2ggNq4Y4="
     },
     "pdb": {
-      "TravelPlanner.pdb": "sha256-01M4Gv1KLjkfbFy/ACG7tmefSX3IvtHmJfnG/sGH80w="
+      "TravelPlanner.pdb": "sha256-UL9JseiS3bOEZ/WCegZLWsKKkePr9CN3O66m29LJCjE="
     }
   },
   "cacheBootResources": true,
