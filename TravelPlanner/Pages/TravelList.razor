@@ -1,0 +1,139 @@
+﻿@page "/TravelList"
+@inject HttpClient Http
+@using MudBlazor
+@using System.Text.Json
+@using System.Collections.Generic
+
+<head>
+    <style>
+        .header-gradient {
+            background: linear-gradient(180deg, rgba(36, 122, 218, 0.79) 0%, rgba(30, 188, 84, 0.79) 100%);
+            text-align: center;
+        }
+
+        .gradient-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            background: linear-gradient(180deg, rgba(36, 122, 218, 0.79) 0%, rgba(30, 188, 84, 0.79) 100%);
+        }
+
+        .center-content {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .full-width {
+            width: 100%;
+        }
+
+        .description-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .date-label {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .description-field {
+            margin-bottom: 16px;
+            border: 2px solid dodgerblue;
+            border-radius: 4px;
+            padding: 8px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<PageTitle>Travel Summary</PageTitle>
+
+<div class="header-gradient">
+    <h1 style="color: white; padding: 20px 0;">Travel Summary</h1>
+</div>
+
+<div class="gradient-container center-content full-width">
+    <MudGrid Spacing="1" Style="margin-top: 10px; width: 80%;">
+        @foreach (var day in daysDescriptions)
+        {
+            <MudItem xs="12">
+                <MudPaper Style="padding: 16px;">
+                    <div class="description-container">
+                        <div class="date-label">@day.Date.ToString("dd-MM-yyyy")</div>
+                        <div class="description-field">
+                            @day.Description
+                        </div>
+                    </div>
+                </MudPaper>
+            </MudItem>
+        }
+    </MudGrid>
+</div>
+
+@code
+{
+    private List<List<DayDescription>> lists;
+    private List<DayDescription> daysDescriptions;
+    private int selectedListIndex = 4;
+
+    private int NumberOfLists = 5;
+    private int month = 4;
+    private int year = 2024;
+
+    protected override void OnInitialized()
+    {
+        lists = new List<List<DayDescription>>();
+        for (int i = 0; i < NumberOfLists; i++)
+        {
+            lists.Add(CreateDayDescriptions());
+        }
+
+        daysDescriptions = lists[selectedListIndex];
+    }
+
+    protected override void OnParametersSet()
+    {
+        daysDescriptions = lists[selectedListIndex];
+    }
+
+    private List<DayDescription> CreateDayDescriptions()
+    {
+        var random = new Random();
+        int startDay = random.Next(20, 29);
+
+        var descriptions = new List<DayDescription>
+        {
+            new DayDescription { Date = new DateTime(year, month, startDay), Description = GenerateRandomDescription(100) },
+            new DayDescription { Date = new DateTime(year, month, startDay + 1), Description = GenerateRandomDescription(100) },
+            new DayDescription { Date = new DateTime(year, month, startDay + 2), Description = GenerateRandomDescription(100) }
+        };
+
+        return descriptions;
+    }
+
+    private string GenerateRandomDescription(int length)
+    {
+        var random = new Random();
+        var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        var stringChars = new char[length];
+
+        for (int i = 0; i < length; i++)
+        {
+            stringChars[i] = chars[random.Next(chars.Length)];
+        }
+
+        return new string(stringChars);
+    }
+
+    private class DayDescription
+    {
+        public DateTime Date { get; set; }
+        public string Description { get; set; }
+    }
+}
