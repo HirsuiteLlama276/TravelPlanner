@@ -144,7 +144,7 @@
                 }
                 else
                 {
-                    <p>Zatwierdź lub zmień zakres dat, aby dodać opisy dla poszczególnych dni.</p>
+                    <p>Zatwierdź lub zmień zakres dat, aby dodać opisy dla poszczególnych dni. @hotel_name</p>
                 }
             </MudPaper>
         </MudItem>
@@ -164,10 +164,13 @@
 
     private bool IsSaveButtonDisabled => currentDayIndex >= daysDescriptions.Count;
 
+    private string hotel_name;
+
     // Data range from /place
     protected override void OnInitialized()
     {
         _dateRange = TravelData.SelectedDateRange;
+        hotel_name = TravelData.hotel_name;
     }
 
     private void OnDateRangeSubmit()

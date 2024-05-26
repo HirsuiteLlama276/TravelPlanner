@@ -165,6 +165,9 @@
     string selectedPlaceImageUrl1 = "https://t3.ftcdn.net/jpg/00/44/42/72/240_F_44427234_B4bGy5FOAxxyaQ4nK6BYSZbkPyfa2ii3.jpg";
     string selectedPlaceImageUrl3 = "";
 
+    //zmienna -nazwa hotelu
+    string hotel_name="";
+
     private string[] countryData = new string[5];
 
     private async Task<IEnumerable<string>> SearchCountry(string searchText)
@@ -208,10 +211,10 @@
             var endDate = _dateRange.End.Value.ToString("dd-MM-yyyy");
 
             TravelData.SelectedDateRange = _dateRange;
+            TravelData.hotel_name = hotel_name;
             Navigation.NavigateTo("/Planner");
 
 
-            // Dodanie dat do opisu miejsca
             //selectedPlaceDescription += $"{startDate} do {endDate}";
         }
         else
