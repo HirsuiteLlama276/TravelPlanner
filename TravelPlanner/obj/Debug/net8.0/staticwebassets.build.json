@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0i1XT3vJROfVO/2rrDlNUsEFcDmDTw/myE7ZQ8m/Oa8=",
+  "Hash": "jLOFinA4aj1oJ4Vni2WkpPL9Xilqm7fjrSn/t1aVj/0=",
   "Source": "TravelPlanner",
   "BasePath": "/",
   "Mode": "Root",
@@ -337,7 +337,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\48519\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\dotnet.js"
+      "OriginalItemSpec": "C:\\Users\\48519\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.5\\runtimes\\browser-wasm\\native\\dotnet.js"
     },
     {
       "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map",
@@ -356,15 +356,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\48519\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\dotnet.js.map"
+      "OriginalItemSpec": "C:\\Users\\48519\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.5\\runtimes\\browser-wasm\\native\\dotnet.js.map"
     },
     {
-      "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.2.8fe5lgi5g0.js",
+      "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.5.j7gnp6lc3k.js",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "_framework/dotnet.native.8.0.2.8fe5lgi5g0.js",
+      "RelativePath": "_framework/dotnet.native.8.0.5.j7gnp6lc3k.js",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -375,7 +375,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\48519\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\dotnet.native.js"
+      "OriginalItemSpec": "C:\\Users\\48519\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.5\\runtimes\\browser-wasm\\native\\dotnet.native.js"
     },
     {
       "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm",
@@ -394,15 +394,15 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\48519\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\dotnet.native.wasm"
+      "OriginalItemSpec": "C:\\Users\\48519\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.5\\runtimes\\browser-wasm\\native\\dotnet.native.wasm"
     },
     {
-      "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.2.t0qr4erwx9.js",
+      "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.5.6tmdt8smm7.js",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "_framework/dotnet.runtime.8.0.2.t0qr4erwx9.js",
+      "RelativePath": "_framework/dotnet.runtime.8.0.5.6tmdt8smm7.js",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -413,7 +413,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\48519\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\dotnet.runtime.js"
+      "OriginalItemSpec": "C:\\Users\\48519\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.5\\runtimes\\browser-wasm\\native\\dotnet.runtime.js"
     },
     {
       "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map",
@@ -432,7 +432,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\48519\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\dotnet.runtime.js.map"
+      "OriginalItemSpec": "C:\\Users\\48519\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.5\\runtimes\\browser-wasm\\native\\dotnet.runtime.js.map"
     },
     {
       "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Google.Apis.Auth.wasm",
@@ -622,7 +622,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\48519\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\icudt_CJK.dat"
+      "OriginalItemSpec": "C:\\Users\\48519\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.5\\runtimes\\browser-wasm\\native\\icudt_CJK.dat"
     },
     {
       "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_EFIGS.dat",
@@ -641,7 +641,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\48519\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\icudt_EFIGS.dat"
+      "OriginalItemSpec": "C:\\Users\\48519\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.5\\runtimes\\browser-wasm\\native\\icudt_EFIGS.dat"
     },
     {
       "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_no_CJK.dat",
@@ -660,7 +660,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\48519\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.2\\runtimes\\browser-wasm\\native\\icudt_no_CJK.dat"
+      "OriginalItemSpec": "C:\\Users\\48519\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.5\\runtimes\\browser-wasm\\native\\icudt_no_CJK.dat"
     },
     {
       "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Authorization.wasm",
@@ -4824,25 +4824,6 @@
       "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.Extensions.Options.wasm"
     },
     {
-      "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\0vbxp2k6lx.gz",
-      "SourceId": "TravelPlanner",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.js.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js"
-    },
-    {
       "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\0zg30gl0gg.gz",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
@@ -5145,6 +5126,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Reflection.Metadata.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\4bujk8izo9.gz",
+      "SourceId": "TravelPlanner",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt_EFIGS.dat.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_EFIGS.dat",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_EFIGS.dat"
     },
     {
       "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\4rfkes8inc.gz",
@@ -5470,6 +5470,25 @@
       "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.Win32.Registry.wasm"
     },
     {
+      "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\6tmdt8smm7.gz",
+      "SourceId": "TravelPlanner",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.runtime.8.0.5.6tmdt8smm7.js.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.5.6tmdt8smm7.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.5.6tmdt8smm7.js"
+    },
+    {
       "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\7pqzhdrfp8.gz",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
@@ -5601,25 +5620,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Text.Encoding.wasm"
-    },
-    {
-      "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\8fe5lgi5g0.gz",
-      "SourceId": "TravelPlanner",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.native.8.0.2.8fe5lgi5g0.js.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.2.8fe5lgi5g0.js",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.2.8fe5lgi5g0.js"
     },
     {
       "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\8fepld40m9.gz",
@@ -5926,25 +5926,6 @@
       "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Web.HttpUtility.wasm"
     },
     {
-      "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\aqsay36hcp.gz",
-      "SourceId": "TravelPlanner",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt_EFIGS.dat.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_EFIGS.dat",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_EFIGS.dat"
-    },
-    {
       "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\ar2snthys5.gz",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
@@ -5962,25 +5943,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Diagnostics.TraceSource.wasm"
-    },
-    {
-      "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\atjy7r6og8.gz",
-      "SourceId": "TravelPlanner",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt_no_CJK.dat.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_no_CJK.dat",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_no_CJK.dat"
     },
     {
       "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\axz9ly9fu2.gz",
@@ -6133,25 +6095,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Net.HttpListener.wasm"
-    },
-    {
-      "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\c8iurxs1jf.gz",
-      "SourceId": "TravelPlanner",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.runtime.js.map.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map"
     },
     {
       "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\cg9fogco18.gz",
@@ -6819,25 +6762,6 @@
       "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Net.Security.wasm"
     },
     {
-      "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\gz0rx8smkc.gz",
-      "SourceId": "TravelPlanner",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.native.wasm.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm"
-    },
-    {
       "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\h2uoe1lnby.gz",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
@@ -7102,6 +7026,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.Extensions.FileProviders.Physical.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\j7gnp6lc3k.gz",
+      "SourceId": "TravelPlanner",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.native.8.0.5.j7gnp6lc3k.js.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.5.j7gnp6lc3k.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.5.j7gnp6lc3k.js"
     },
     {
       "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\j7sng3bin6.gz",
@@ -7655,6 +7598,25 @@
       "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Google.Apis.Cloudchannel.v1.wasm"
     },
     {
+      "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\ni96tixou9.gz",
+      "SourceId": "TravelPlanner",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.js.map.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map"
+    },
+    {
       "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\nifbl5jdxj.gz",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
@@ -7845,25 +7807,6 @@
       "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Xml.XPath.wasm"
     },
     {
-      "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\or2akpu20b.gz",
-      "SourceId": "TravelPlanner",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt_CJK.dat.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_CJK.dat",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_CJK.dat"
-    },
-    {
       "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\oy8klsvtcc.gz",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
@@ -8014,6 +7957,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\GoogleMapsComponents.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\qrz41r08s8.gz",
+      "SourceId": "TravelPlanner",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.runtime.js.map.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map"
     },
     {
       "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\qsytzt358a.gz",
@@ -8339,23 +8301,23 @@
       "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.ComponentModel.Annotations.wasm"
     },
     {
-      "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\t0qr4erwx9.gz",
+      "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\swhrmk7qo7.gz",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "_framework/dotnet.runtime.8.0.2.t0qr4erwx9.js.gz",
+      "RelativePath": "_framework/dotnet.native.wasm.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
       "AssetMergeBehavior": "",
       "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.2.t0qr4erwx9.js",
+      "RelatedAsset": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.2.t0qr4erwx9.js"
+      "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm"
     },
     {
       "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\t9hc6sy7dw.gz",
@@ -8641,6 +8603,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.IO.FileSystem.Watcher.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\vh5acbahlf.gz",
+      "SourceId": "TravelPlanner",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt_no_CJK.dat.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_no_CJK.dat",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_no_CJK.dat"
     },
     {
       "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\vms28wiypk.gz",
@@ -8966,25 +8947,6 @@
       "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Private.Xml.Linq.wasm"
     },
     {
-      "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\xwklcg3uud.gz",
-      "SourceId": "TravelPlanner",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.js.map.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map"
-    },
-    {
       "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\y106ojlmpf.gz",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
@@ -9118,6 +9080,25 @@
       "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.wasm"
     },
     {
+      "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\zdprxwfeqd.gz",
+      "SourceId": "TravelPlanner",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.js.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js"
+    },
+    {
       "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\zlt7xuwiq3.gz",
       "SourceId": "TravelPlanner",
       "SourceType": "Computed",
@@ -9173,6 +9154,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Cryptography.Primitives.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\compressed\\zz5ro19rmw.gz",
+      "SourceId": "TravelPlanner",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt_CJK.dat.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_CJK.dat",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_CJK.dat"
     },
     {
       "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TravelPlanner.styles.css",
@@ -9327,12 +9327,12 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\wwwroot\\sample-data\\kawiarnia.json",
+      "Identity": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\wwwroot\\sample-data\\hotele.json",
       "SourceId": "TravelPlanner",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "sample-data/kawiarnia.json",
+      "RelativePath": "sample-data/hotele.json",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -9343,7 +9343,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\sample-data\\kawiarnia.json"
+      "OriginalItemSpec": "wwwroot\\sample-data\\hotele.json"
     }
   ]
 }

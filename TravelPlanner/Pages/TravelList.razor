@@ -1,8 +1,11 @@
 ﻿@page "/TravelList"
+@inject NavigationManager Navigation
 @inject HttpClient Http
 @using MudBlazor
 @using System.Text.Json
 @using System.Collections.Generic
+@using System.Threading.Tasks
+@using TravelPlanner.Models
 
 <head>
     <style>
@@ -11,12 +14,38 @@
             text-align: center;
         }
 
+        .nav-menu-gradient {
+            background: linear-gradient(180deg, rgba(36, 122, 218, 0.79) 0%, rgba(30, 188, 84, 0.79) 100%);
+            min-height: 5vh;
+        }
+
         .gradient-container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
             width: 100%;
             background: linear-gradient(180deg, rgba(36, 122, 218, 0.79) 0%, rgba(30, 188, 84, 0.79) 100%);
+            min-height: 100vh; /* Ensure the container takes the full height of the viewport */
+        }
+
+        .left-menu-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
+            height: 100%;
+            border-right: 2px solid gray; /* Separate the menu with a right border */
+        }
+
+        .left-menu {
+            padding: 10px;
+            margin-right: 20px;
+        }
+
+        .menu-item {
+            margin-bottom: 10px;
+        }
+
+        .content {
+            padding: 10px;
+            overflow: hidden; /* Prevent content overflow */
         }
 
         .center-content {
@@ -33,7 +62,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 100%;
+            word-wrap: break-word; /* Ensure long words break to the next line */
         }
 
         .date-label {
@@ -48,9 +77,32 @@
             border-radius: 4px;
             padding: 8px;
             background-color: lightblue;
+            overflow: hidden; /* Prevent content overflow */
+            box-sizing: border-box; /* Ensure padding and border are included in element's total width */
+            white-space: normal; /* Ensure text wraps */
+            max-width: 400px; /* Ensure it doesn't exceed container width */
         }
     </style>
 </head>
+
+<div class="nav-menu-gradient">
+    <MudToolbar Color="Color.Primary">
+    <MudToolbarRow>
+        <MudToolbarItem>
+            <MudButton OnClick="NavigateToTravelList" Color="Color.Primary" Variant="Variant.Text"
+                           Style="border: 1px solid green; border-radius: 4px;font-size:larger">Travel List</MudButton>
+        </MudToolbarItem>
+        <MudToolbarItem>
+                <MudButton OnClick="NavigateToPlace" Color="Color.Primary" Variant="Variant.Text" 
+                Style=" border: 1px solid green; border-radius: 4px;font-size:larger">Place</MudButton>
+        </MudToolbarItem>
+        <MudToolbarItem>
+                <MudButton OnClick="NavigateToPlanner" Color="Color.Primary" Variant="Variant.Text" 
+                Style="border: 1px solid green; border-radius: 4px;font-size:larger">Planner</MudButton>
+        </MudToolbarItem>
+    </MudToolbarRow>
+</MudToolbar>
+</div>
 
 <PageTitle>Travel Summary</PageTitle>
 
@@ -58,82 +110,118 @@
     <h1 style="color: white; padding: 20px 0;">Travel Summary</h1>
 </div>
 
-<div class="gradient-container center-content full-width">
-    <MudGrid Spacing="1" Style="margin-top: 10px; width: 80%;">
-        @foreach (var day in daysDescriptions)
-        {
-            <MudItem xs="12">
-                <MudPaper Style="padding: 16px;">
-                    <div class="description-container">
-                        <div class="date-label">@day.Date.ToString("dd-MM-yyyy")</div>
-                        <div class="description-field">
-                            @day.Description
-                        </div>
+<div class="gradient-container full-width">
+    <MudGrid>
+        <MudItem xs="3">
+            <div class="left-menu-container">
+                <div class="left-menu">
+                    <MudList>
+                        @foreach (var hotel in hotels)
+                        {
+                            <MudListItem Class="menu-item" OnClick="() => OnListSelected(hotels.IndexOf(hotel))" Style="border: 1px solid lightgray; padding: 10px; border-radius: 4px;">
+                                @hotel.HotelName
+                            </MudListItem>
+                        }
+                    </MudList>
+                </div>
+            </div>
+        </MudItem>
+        <MudItem xs="9" Style="max-width:800px">
+            <div class="content center-content full-width">
+                @if (currentHotel != null)
+                {
+                    <div>
+                        <MudGrid Spacing="1" Style="margin-top: 10px; width: 100%;">
+                            <MudItem xs="12">
+                                <div class="description-container" style="font-size:2.4em; font-weight:bolder">@currentHotel.HotelName</div>
+                            </MudItem>
+                            @foreach (var day in currentHotel.DaysList)
+                            {
+                                <MudItem xs="12">
+                                    <MudPaper Style="padding: 16px;">
+                                        <div class="description-container full-width">
+                                            <div class="date-label">@day.Date.ToString("dd-MM-yyyy")</div>
+                                            <div class="description-field">
+                                                @day.Description
+                                            </div>
+                                        </div>
+                                    </MudPaper>
+                                </MudItem>
+                            }
+                        </MudGrid>
                     </div>
-                </MudPaper>
-            </MudItem>
-        }
+                }
+            </div>
+        </MudItem>
     </MudGrid>
 </div>
 
 @code
 {
-    private List<List<DayDescription>> lists;
-    private List<DayDescription> daysDescriptions;
-    private int selectedListIndex = 4;
+    private List<Hotel> hotels = new List<Hotel>();
+    private Hotel currentHotel;
+    private int selectedListIndex = 2;
+    public string err = "zxcxcz";
 
-    private int NumberOfLists = 5;
-    private int month = 4;
-    private int year = 2024;
-
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
-        lists = new List<List<DayDescription>>();
-        for (int i = 0; i < NumberOfLists; i++)
+        try
         {
-            lists.Add(CreateDayDescriptions());
+            await LoadHotelData();
+            if (hotels != null && hotels.Count > 0)
+            {
+                if (selectedListIndex >= 0 && selectedListIndex < hotels.Count)
+                {
+                    currentHotel = hotels[selectedListIndex];
+                }
+            }
         }
-
-        daysDescriptions = lists[selectedListIndex];
-    }
-
-    protected override void OnParametersSet()
-    {
-        daysDescriptions = lists[selectedListIndex];
-    }
-
-    private List<DayDescription> CreateDayDescriptions()
-    {
-        var random = new Random();
-        int startDay = random.Next(20, 29);
-
-        var descriptions = new List<DayDescription>
+        catch (Exception ex)
         {
-            new DayDescription { Date = new DateTime(year, month, startDay), Description = GenerateRandomDescription(100) },
-            new DayDescription { Date = new DateTime(year, month, startDay + 1), Description = GenerateRandomDescription(100) },
-            new DayDescription { Date = new DateTime(year, month, startDay + 2), Description = GenerateRandomDescription(100) }
-        };
-
-        return descriptions;
-    }
-
-    private string GenerateRandomDescription(int length)
-    {
-        var random = new Random();
-        var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-        var stringChars = new char[length];
-
-        for (int i = 0; i < length; i++)
-        {
-            stringChars[i] = chars[random.Next(chars.Length)];
+            Console.Error.WriteLine($"Error initializing data: {ex.Message}");
+            err = "Error initializing data";
         }
-
-        return new string(stringChars);
     }
 
-    private class DayDescription
+    private async Task LoadHotelData()
     {
-        public DateTime Date { get; set; }
-        public string Description { get; set; }
+        try
+        {
+            var jsonString = await Http.GetStringAsync("sample-data/hotele.json");
+            var options = new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                };
+            hotels = JsonSerializer.Deserialize<List<Hotel>>(jsonString, options);
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine($"Error loading hotel data: {ex.Message}");
+            err = "Error loading hotel data";
+        }
+    }
+
+    private void OnListSelected(int index)
+    {
+        if (index >= 0 && index < hotels.Count)
+        {
+            selectedListIndex = index;
+            currentHotel = hotels[selectedListIndex];
+        }
+    }
+
+    private void NavigateToTravelList()
+    {
+        Navigation.NavigateTo("/TravelList");
+    }
+
+    private void NavigateToPlace()
+    {
+        Navigation.NavigateTo("/place");
+    }
+
+    private void NavigateToPlanner()
+    {
+        Navigation.NavigateTo("/planner");
     }
 }

@@ -37,8 +37,8 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\wwwroot\\sample-data\\kawiarnia.json",
-      "PackagePath": "staticwebassets\\sample-data\\kawiarnia.json"
+      "Id": "C:\\Users\\48519\\Desktop\\Project_ZPP\\TravelPlanner\\TravelPlanner\\wwwroot\\sample-data\\hotele.json",
+      "PackagePath": "staticwebassets\\sample-data\\hotele.json"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TravelPlanner.Microsoft.AspNetCore.StaticWebAssets.props",

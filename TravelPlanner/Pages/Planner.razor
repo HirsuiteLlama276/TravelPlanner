@@ -55,6 +55,11 @@
             background-color: dodgerblue !important;
         }
 
+        .nav-menu-gradient {
+            background: linear-gradient(180deg, rgba(36, 122, 218, 0.79) 0%, rgba(30, 188, 84, 0.79) 100%);
+            min-height: 5vh;
+        }
+
         .description-field {
             margin-bottom: 16px;
             border: 2px solid dodgerblue;
@@ -83,6 +88,25 @@
         }
     </style>
 </head>
+
+<div class="nav-menu-gradient">
+    <MudToolbar Color="Color.Primary">
+    <MudToolbarRow>
+        <MudToolbarItem>
+            <MudButton OnClick="NavigateToTravelList" Color="Color.Primary" Variant="Variant.Text"
+                           Style="border: 1px solid green; border-radius: 4px;font-size:larger">Travel List</MudButton>
+        </MudToolbarItem>
+        <MudToolbarItem>
+                <MudButton OnClick="NavigateToPlace" Color="Color.Primary" Variant="Variant.Text" 
+                Style=" border: 1px solid green; border-radius: 4px;font-size:larger">Place</MudButton>
+        </MudToolbarItem>
+        <MudToolbarItem>
+                <MudButton OnClick="NavigateToPlanner" Color="Color.Primary" Variant="Variant.Text" 
+                Style="border: 1px solid green; border-radius: 4px;font-size:larger">Planner</MudButton>
+        </MudToolbarItem>
+    </MudToolbarRow>
+</MudToolbar>
+</div>
 
 <PageTitle>Planner</PageTitle>
 
@@ -144,7 +168,7 @@
                 }
                 else
                 {
-                    <p>Zatwierdź lub zmień zakres dat, aby dodać opisy dla poszczególnych dni. @hotel_name</p>
+                    <p>Zatwierdź lub zmień zakres dat, aby dodać opisy dla poszczególnych dni.</p>
                 }
             </MudPaper>
         </MudItem>
@@ -237,5 +261,20 @@
     {
         public DateTime Date { get; set; }
         public string Description { get; set; }
+    }
+
+    private void NavigateToTravelList()
+    {
+        Navigation.NavigateTo("/TravelList");
+    }
+
+    private void NavigateToPlace()
+    {
+        Navigation.NavigateTo("/place");
+    }
+
+    private void NavigateToPlanner()
+    {
+        Navigation.NavigateTo("/planner");
     }
 }

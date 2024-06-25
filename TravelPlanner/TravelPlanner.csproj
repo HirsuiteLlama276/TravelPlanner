@@ -7,6 +7,14 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Compile Remove="HotelsService.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="Pages\test.razor" />
+    </ItemGroup>
+
+    <ItemGroup>
         <PackageReference Include="Blazored.LocalStorage" Version="4.5.0" />
         <PackageReference Include="BlazorGoogleMaps" Version="4.1.0" />
         <PackageReference Include="Google.Apis.Auth" Version="1.67.0" />
@@ -21,7 +29,12 @@
     </ItemGroup>
 
     <ItemGroup>
+      <_ContentIncludedByDefault Remove="Pages\test.razor" />
       <_ContentIncludedByDefault Remove="wwwroot\sample-data\weather.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <UpToDateCheckInput Remove="Pages\test.razor" />
     </ItemGroup>
 
 </Project>
