@@ -15,19 +15,20 @@ else
         }
     </ol>
 }
+<img src="@selectedPlaceImageUrl" id="selectedImage" alt="Selected Place" style="width: 100%; min-width:700px; height: auto; max-height: 500px; object-fit: contain;" onload="adjustDescriptionWidth()" />
 
 @code {
     private List<string> _places = new List<string>();
     private bool _getBranchesError;
     private bool _shouldRender;
-
+    string selectedPlaceImageUrl = "";
     protected override bool ShouldRender() => _shouldRender;
 
     protected override async Task OnInitializedAsync()
     {
         var client = new myHttpClient();
         client.AddHeader("X-Goog-FieldMask", "places.displayName,places.formattedAddress,places.photos");
-        var response = await client.SearchForHotel("hotele bielsko");
+        var response = await client.SearchForHotel("qubus bielsko");
         if (response.IsSuccessStatusCode)
         {
             var jsonString = await response.Content.ReadFromJsonAsync<JsonDocument>();

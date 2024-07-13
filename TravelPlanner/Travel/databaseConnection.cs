@@ -6,10 +6,15 @@ using MongoDB.Bson;
 
 public class databaseConnection
 {
-    private MongoClient _client = new MongoClient("mongodb://localhost:27017\"");
+    private MongoClient _client = new MongoClient("mongodb://localhost:2701");
 
-    public IMongoCollection<hotel> GetHotel()
+    public  IMongoCollection<Hotel> GetHotel()
     {
-        return _client.GetDatabase("TravelPlanner").GetCollection<hotel>("hotel");
+        return _client.GetDatabase("TravelPlanner").GetCollection<Hotel>("hotel");
+    }
+
+    void  SetHotel(BsonDocument hotel)
+    { 
+        _client.GetDatabase("TravelPlanner").GetCollection<BsonDocument>("hotel").InsertOne(hotel);
     }
 }

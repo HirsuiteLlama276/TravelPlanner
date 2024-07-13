@@ -46,19 +46,11 @@
                 <MudStack Spacing="1" >
                     <MudText Typo="Typo.h1" Style="font-size:25px; font-weight:700; margin-top: 30px; 
                                text-align:center;">Wybierz cel podróży</MudText>
-                    <MudAutocomplete T="string" Label="Country" Value="@Country"
-                                     ValueChanged="@CountryValueChanged"
-                                     SearchFunc="@SearchCountry" Variant="Variant.Filled"
+                    <MudAutocomplete T="string" Label="Country" Value="@Hotel"
+                                     ValueChanged="@HotelValueChange"
+                                     SearchFunc="@SearchForHotel" Variant="Variant.Filled"
                                      ResetValueOnEmptyText=true
                                      Style="background-color:white; margin-top: 40px;" />
-                    <MudAutocomplete T="string" Label="City" Value="@City" ValueChanged="@CityValueChanged" SearchFunc="@SearchCity"
-                                     Variant="Variant.Filled" Style="background-color:white;"
-                                     ResetValueOnEmptyText=true
-                                     ReadOnly=@country_empty />
-                    <MudAutocomplete T="string" Label="Hotel" Value="@HotelName" ValueChanged="@HotelValueChanged" SearchFunc="@SearchHotel"
-                                     Variant="Variant.Filled" Style="background-color:white;"
-                                     ResetValueOnEmptyText=true
-                                     ReadOnly=@city_empty />
                 </MudStack>
             </MudContainer>
         </MudPaper>
@@ -85,46 +77,24 @@
                     }
                 </div>
             </MudCardContent>
-
         </MudPaper>
     </MudItem>
 </MudGrid>
 
 @code {
-    public string City;
-    public string HotelName;
-    public string Country;
-
-    //zmienne pomocnicze czyszczenia autocomplete
-    public bool country_empty=true, city_empty=true;
-
-    //zmienna dla opisu hotelu 
-
+    public string Hotel = "";
     string selectedPlaceDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
     "Ut porta molestie lorem ac mattis. Nunc cursus quis nibh eget iaculis.";
+    string selectedPlaceImageUrl="";
+    private string[] hotelData = new string[5];
 
-    //adres url obrazu z api
-
-    string selectedPlaceImageUrl="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/City_Hall_of_Mountain_View_-_panoramio_-_Aleh_Haiko_%281%29.jpg/1280px-City_Hall_of_Mountain_View_-_panoramio_-_Aleh_Haiko_%281%29.jpg";
-    string selectedPlaceImageUrl1 = "https://t3.ftcdn.net/jpg/00/44/42/72/240_F_44427234_B4bGy5FOAxxyaQ4nK6BYSZbkPyfa2ii3.jpg";
-
-    private string[] countryData = new string[5];
-    private string[] cityData =
-    {
-        "New Hampshire", "New Jersey", "New Mexico", "New York",
-        "Warsaw", "Kraków", "Wieliczka"
-    };
-    private string[] hotelData =
-    {
-        "Qubus", "Alpin", "hotel3", "hotel4",
-        "Prezydent", "hotel6", "hotel5"
-    };
-
-    private async Task<IEnumerable<string>> SearchCountry(string searchText)
+    private async Task<IEnumerable<string>> SearchForHotel(string searchText)
     {
         var client = new myHttpClient();
-        countryData = new string[5];
-        client.AddHeader("X-Goog-FieldMask", "places.displayName,places.formattedAddress,places.photos");
+        hotelData = new string[5];
+        if (searchText == "")
+            return hotelData;
+        
         var response = await client.SearchForHotel(searchText);
         if (response.IsSuccessStatusCode)
         {
@@ -134,71 +104,44 @@
                 var rootPlaces = jsonString.RootElement.GetProperty("places");
                 for (int i = 0; i < 5; i++)
                 {
-                    countryData[i] = rootPlaces[i].GetProperty("displayName").GetProperty("text").ToString();
+                    hotelData[i] = rootPlaces[i].GetProperty("displayName").GetProperty("text").ToString();
                     i++;
                 }
             }
         }
-        return countryData;
+        return hotelData;
     }
 
-    private async Task<IEnumerable<string>> SearchCity(string searchText)
-    {
-        // Zmienić na wczytywanie poszczegolnych danych z api
-        if (string.IsNullOrEmpty(searchText))
+    private async void HotelValueChange(string newValue)
+    {        
+        Hotel = newValue;
+        if (string.IsNullOrEmpty(newValue)) return;
+        string photoName ="";
+        var client = new myHttpClient();
+        var response = await client.SearchForHotel(Hotel);
+        if (response.IsSuccessStatusCode)
         {
-            return cityData;
+            var jsonString = await response.Content.ReadFromJsonAsync<JsonDocument>();
+            if (jsonString != null)
+            {
+                var rootPlaces = jsonString.RootElement.GetProperty("places");
+                photoName = rootPlaces[0].GetProperty("photos")[0].GetProperty("name").ToString();
+            }
         }
-        else
-        {
-            return cityData.Where(x => x.Contains(searchText, StringComparison.InvariantCultureIgnoreCase));
-        }
-    }
-    private async Task<IEnumerable<string>> SearchHotel(string searchText)
-    {
-        // Zmienić na wczytywanie poszczegolnych danych z api
-        if (string.IsNullOrEmpty(searchText))
-        {
-            return hotelData;
-        }
-        else
-        {
-            return hotelData.Where(x => x.Contains(searchText, StringComparison.InvariantCultureIgnoreCase));
-        }
-    }
 
-    //obsluga funkcji pol autocomplete
-
-    private void CountryValueChanged(string newValue)
-    {
-        Country = newValue;
-        country_empty = string.IsNullOrEmpty(newValue);
-        HotelName = "";
-        City = "";
-        if(string.IsNullOrEmpty(newValue))
+        client = new myHttpClient();
+        var photoResponse = await client.SearchForHotelPhotos(photoName);
+        if (photoResponse.IsSuccessStatusCode)
         {
-            city_empty = true;
-            country_empty = true;
+            var photoResponseContent = await response.Content.ReadFromJsonAsync<JsonDocument>();
+            if (photoResponseContent != null)
+            {
+                var photoUri = photoResponseContent.RootElement.GetProperty("photoUri").ToString();
+                photoUri = selectedPlaceImageUrl;
+                //var photoUri = JsonSerializer.Deserialize<HotelPhoto>(photoResponseContent);
+            }
         }
-    }
-    private void CityValueChanged(string newValue)
-    {
-        City = newValue;
-        city_empty = string.IsNullOrEmpty(newValue);
-        HotelName = "";
-        if (string.IsNullOrEmpty(newValue))
-        {
-            city_empty = true;
-        }
-    }
 
-    private void HotelValueChanged(string newValue)
-    {
-        HotelName = newValue;
-    }
-
-    protected override async Task OnInitializedAsync()
-    {
-
+        Console.WriteLine(selectedPlaceImageUrl);
     }
 }
