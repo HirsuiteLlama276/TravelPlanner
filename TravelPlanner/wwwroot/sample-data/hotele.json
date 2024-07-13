@@ -1,0 +1,61 @@
+[
+  {
+    "HotelName": "hotel1",
+    "DaysList": [
+      {
+        "Date": "2024-06-22T00:00:00.000Z",
+        "Description": "day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1"
+      },
+      {
+        "Date": "2024-06-23T00:00:00.000Z",
+        "Description": "day2day2day2day2day2day2day2day2day2day2day2day2day2day2day2day2day2day2day2day2day2day2day2"
+      },
+      {
+        "Date": "2024-06-24T00:00:00.000Z",
+        "Description": "day3day3day3day3day3day3day3day3day3day3day3day3day3day3day3day3day3day3day3day3day3day3day3"
+      }
+    ]
+  },
+  {
+    "HotelName": "hoteljakiśtam_testowy",
+    "DaysList": [
+      {
+        "Date": "2024-06-25T00:00:00.000Z",
+        "Description": "day12day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1day1"
+      },
+      {
+        "Date": "2024-06-26T00:00:00.000Z",
+        "Description": "day2day2day2day2day2day2day2day2day2day2day2day2day2day2day2day2day2day2day2day2day2day2day2"
+      },
+      {
+        "Date": "2024-06-27T00:00:00.000Z",
+        "Description": "day3day3day3day"
+      }
+    ]
+  },
+  {
+    "HotelName": "hotel3",
+    "DaysList": [
+      {
+        "Date": "2024-07-29T00:00:00.000Z",
+        "Description": "day1"
+      },
+      {
+        "Date": "2024-07-30T00:00:00.000Z",
+        "Description": "day2"
+      },
+      {
+        "Date": "2024-07-31T00:00:00.000Z",
+        "Description": "day3"
+      },
+      {
+        "Date": "2024-08-01T00:00:00.000Z",
+        "Description": "day4"
+      },
+      {
+        "Date": "2024-08-02T00:00:00.000Z",
+        "Description": "day5"
+      }
+    ]
+  }
+]

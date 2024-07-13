@@ -1,14 +1,17 @@
 ﻿@page "/place"
 @inject HttpClient Http
-@using System.Net.Http.Json
+@inject TravelDataMigration TravelData
+@inject NavigationManager Navigation
 @using Newtonsoft.Json.Linq
 @using MudBlazor
 @using System.Text.Json
+
 <MudPopoverProvider></MudPopoverProvider>
+
 <head>
     <style>
         .mud-autocomplete-input, .mud-list {
-            background-color: white;
+            background-color: lightblue;
         }
 
         .mud-popover {
@@ -19,8 +22,54 @@
             background: linear-gradient(180deg, rgba(36, 122, 218, 0.79) 0%, rgba(30, 188, 84, 0.79) 100%);
             text-align: center;
         }
+
+        .gradient-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            background: linear-gradient(180deg, rgba(36, 122, 218, 0.79) 0%, rgba(30, 188, 84, 0.79) 100%);
+        }
+
+        .center-content {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .nav-menu-gradient {
+            background: linear-gradient(180deg, rgba(36, 122, 218, 0.79) 0%, rgba(30, 188, 84, 0.79) 100%);
+            min-height: 5vh;
+        }
+
+        .full-width {
+            width: 100%;
+        }
+
+        .date-picker-zindex {
+            z-index: 1600 !important;
+        }
+
+        .mud-picker-container {
+            background: linear-gradient(180deg, rgba(36, 122, 218, 1) 0%, rgba(30, 188, 84, 1) 100%);
+        }
+
+        .mud-picker-calendar .mud-day.mud-range.mud-range-between {
+            border-radius: 0;
+            background-color: dodgerblue;
+        }
+
+        .mud-picker-calendar .mud-day.mud-range.mud-range-start-selected {
+            background-color: dodgerblue !important;
+        }
+
+        .mud-picker-calendar .mud-day.mud-range.mud-range-end-selected {
+            background-color: dodgerblue !important;
+        }
+
     </style>
 </head>
+
 <script>
     function adjustDescriptionWidth() {
         var image = document.getElementById('selectedImage');
@@ -30,14 +79,34 @@
         }
     }
     window.onload = adjustDescriptionWidth;
-    window.onresize = adjustDescriptionWidth;  
+    window.onresize = adjustDescriptionWidth;
 </script>
+
+<div class="nav-menu-gradient">
+    <MudToolbar Color="Color.Primary">
+    <MudToolbarRow>
+        <MudToolbarItem>
+            <MudButton OnClick="NavigateToTravelList" Color="Color.Primary" Variant="Variant.Text"
+                           Style="border: 1px solid green; border-radius: 4px;font-size:larger">Travel List</MudButton>
+        </MudToolbarItem>
+        <MudToolbarItem>
+                <MudButton OnClick="NavigateToPlace" Color="Color.Primary" Variant="Variant.Text" 
+                Style=" border: 1px solid green; border-radius: 4px;font-size:larger">Place</MudButton>
+        </MudToolbarItem>
+        <MudToolbarItem>
+                <MudButton OnClick="NavigateToPlanner" Color="Color.Primary" Variant="Variant.Text" 
+                Style="border: 1px solid green; border-radius: 4px;font-size:larger">Planner</MudButton>
+        </MudToolbarItem>
+    </MudToolbarRow>
+</MudToolbar>
+</div>
 
 <PageTitle>Place</PageTitle>
 
 <div class="header-gradient">
     <h1 style="color: white; padding: 20px 0;">Travel Planner</h1>
 </div>
+
 
 <MudGrid Spacing="1">
     <MudItem>
@@ -72,8 +141,21 @@
                             </div>
                             <div id="selectedDescription" style="text-align: center; margin: 20px auto 0 auto; width: fit-content;">
                                 <p style="word-wrap: break-word;">@selectedPlaceDescription</p>
+
                             </div>
+                            @if (!string.IsNullOrEmpty(selectedPlaceImageUrl))
+                            {
+                                <div style="text-align: center;">
+                                    <div style="display: inline-block; max-width: 100%; overflow: hidden;">
+                                        <img src="@selectedPlaceImageUrl" id="selectedImage" alt="Selected Place" style="width: 100%; min-width:700px; height: auto; max-height: 500px; object-fit: contain;" onload="adjustDescriptionWidth()" />
+                                    </div>
+                                    <div id="selectedDescription" style="text-align: center; margin: 20px auto 0 auto; width: fit-content;">
+                                        <p style="word-wrap: break-word;">@selectedPlaceDescription</p>
+                                    </div>
+                                </div>
+                            }
                         </div>
+
                     }
                 </div>
             </MudCardContent>
@@ -83,12 +165,15 @@
 
 @code {
     public string Hotel = "";
+
     string selectedPlaceDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
     "Ut porta molestie lorem ac mattis. Nunc cursus quis nibh eget iaculis.";
     string selectedPlaceImageUrl="";
     private string[] hotelData = new string[5];
 
+
     private async Task<IEnumerable<string>> SearchForHotel(string searchText)
+
     {
         var client = new myHttpClient();
         hotelData = new string[5];
@@ -111,6 +196,7 @@
         }
         return hotelData;
     }
+
 
     private async void HotelValueChange(string newValue)
     {        
@@ -143,5 +229,6 @@
         }
 
         Console.WriteLine(selectedPlaceImageUrl);
+
     }
 }
