@@ -107,49 +107,41 @@
     <h1 style="color: white; padding: 20px 0;">Travel Planner</h1>
 </div>
 
-<div>
-    <div>
-        <MudGrid>
-            <MudItem xs="12" md="5">
-                <MudAutocomplete T="string" Label="Wyszukaj miasto lub hotel" Value="@Country"
-                                 ValueChanged="@CountryValueChanged"
-                                 SearchFunc="@SearchCountry" Variant="Variant.Filled"
-                                 ResetValueOnEmptyText=true
-                                 Style="background-color: lightblue; width: 100%;" />
-            </MudItem>
-            <MudItem xs="12" md="6">
-                <MudPaper Style="background-color:lightblue; height:91%; width:100%; margin-top:6px; 
-                            margin-left:-10px">
-                    <MudDateRangePicker PickerVariant="PickerVariant.Dialog" @bind-DateRange="@_dateRange"
-                                        Margin="Margin.Dense" Style="width: 90%; height=90px;
-                                         margin-left:10px; margin-right:10%;
-                                        background-color: lightblue; "
-                                        PlaceholderStart="Start Date" PlaceholderEnd="End Date"
-                                        Class="date-picker-zindex" />
-                </MudPaper>
-            </MudItem>
-            <MudItem xs="12" md="1">
-                <MudButton Variant="Variant.Filled"
-                           OnClick="OnSubmitClick" EndIcon="@Icons.Material.Filled.Add"
-                           Style="height:90%; width:120%;  
-                                    margin-top:6px; margin-left:-20px; 
-                                    background-color: dodgerblue; border-radius:5%">
-                    Zatwierdź
-                </MudButton>
-            </MudItem>
-        </MudGrid>
-    </div>
 
-    <div class="gradient-container center-content ">
-        <MudGrid Spacing="1" Style="margin-top: 10px; width: 80%;">
-            <MudItem xs="12">
-                <MudPaper class="rounded-3" Height="100%" Style="background-color: lightblue;">
-                    <MudCardContent>
-                        <div style="width: 100%; height: 100%; position: relative; text-align: center;">
-                            <div style="width: 100%; height: 100px; background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,123,255,1) 100%);
-                                text-align: center; display: flex; align-items: center;
-                                justify-content: center; display: @(string.IsNullOrEmpty(selectedPlaceImageUrl) ? "flex" : "none");">
-                                <p style="font-size: 24px; color: white;">Gdzie się zatrzymasz?</p>
+<MudGrid Spacing="1">
+    <MudItem>
+        <MudPaper class="rounded-3" Width="400px" Height="400px" Style="background-color: lightblue">
+            <MudContainer MaxWidth="MaxWidth.Small">
+                <MudStack Spacing="1" >
+                    <MudText Typo="Typo.h1" Style="font-size:25px; font-weight:700; margin-top: 30px; 
+                               text-align:center;">Wybierz cel podróży</MudText>
+                    <MudAutocomplete T="string" Label="Country" Value="@Hotel"
+                                     ValueChanged="@HotelValueChange"
+                                     SearchFunc="@SearchForHotel" Variant="Variant.Filled"
+                                     ResetValueOnEmptyText=true
+                                     Style="background-color:white; margin-top: 40px;" />
+                </MudStack>
+            </MudContainer>
+        </MudPaper>
+    </MudItem>
+    <MudItem xs="8">
+        <MudPaper class="rounded-3" Height="100%" Style="background-color: lightblue;">
+            <MudCardContent>
+                <div style="width: 100%; height: 100%; position: relative; text-align: center;">
+                    <div style="width: 100%; height: 100px; background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,123,255,1) 100%);
+                        text-align: center; display: flex; align-items: center;
+                        justify-content: center; display: @(string.IsNullOrEmpty(selectedPlaceImageUrl) ? "flex" : "none");">
+                        <p style="font-size: 24px; color: white;">Gdzie się zatrzymasz?</p>
+                    </div>
+                    @if (!string.IsNullOrEmpty(selectedPlaceImageUrl))
+                    {
+                        <div style="text-align: center;">
+                            <div style="display: inline-block; max-width: 100%; overflow: hidden;">
+                                <img src="@selectedPlaceImageUrl" id="selectedImage" alt="Selected Place" style="width: 100%; min-width:700px; height: auto; max-height: 500px; object-fit: contain;" onload="adjustDescriptionWidth()" />
+                            </div>
+                            <div id="selectedDescription" style="text-align: center; margin: 20px auto 0 auto; width: fit-content;">
+                                <p style="word-wrap: break-word;">@selectedPlaceDescription</p>
+
                             </div>
                             @if (!string.IsNullOrEmpty(selectedPlaceImageUrl))
                             {
@@ -163,41 +155,31 @@
                                 </div>
                             }
                         </div>
-                    </MudCardContent>
-                </MudPaper>
-            </MudItem>
-        </MudGrid>
-    </div>
-</div>
+
+                    }
+                </div>
+            </MudCardContent>
+        </MudPaper>
+    </MudItem>
+</MudGrid>
 
 @code {
-    public string Country;
-
-    //Zakres dni podrozy
-
-    private DateRange _dateRange { get; set; }
-
-    //zmienna dla opisu hotelu:z api
+    public string Hotel = "";
 
     string selectedPlaceDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
     "Ut porta molestie lorem ac mattis. Nunc cursus quis nibh eget iaculis.";
+    string selectedPlaceImageUrl="";
+    private string[] hotelData = new string[5];
 
-    //adres url obrazu: z api
 
-    string selectedPlaceImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/City_Hall_of_Mountain_View_-_panoramio_-_Aleh_Haiko_%281%29.jpg/1280px-City_Hall_of_Mountain_View_-_panoramio_-_Aleh_Haiko_%281%29.jpg";
-    string selectedPlaceImageUrl1 = "https://t3.ftcdn.net/jpg/00/44/42/72/240_F_44427234_B4bGy5FOAxxyaQ4nK6BYSZbkPyfa2ii3.jpg";
-    string selectedPlaceImageUrl3 = "";
+    private async Task<IEnumerable<string>> SearchForHotel(string searchText)
 
-    //zmienna -nazwa hotelu: z api
-    string hotel_name="hotel_testowy";
-
-    private string[] countryData = new string[5];
-
-    private async Task<IEnumerable<string>> SearchCountry(string searchText)
     {
         var client = new myHttpClient();
-        countryData = new string[5];
-        client.AddHeader("X-Goog-FieldMask", "places.displayName,places.formattedAddress,places.photos");
+        hotelData = new string[5];
+        if (searchText == "")
+            return hotelData;
+        
         var response = await client.SearchForHotel(searchText);
         if (response.IsSuccessStatusCode)
         {
@@ -207,59 +189,46 @@
                 var rootPlaces = jsonString.RootElement.GetProperty("places");
                 for (int i = 0; i < 5; i++)
                 {
-                    countryData[i] = rootPlaces[i].GetProperty("displayName").GetProperty("text").ToString();
+                    hotelData[i] = rootPlaces[i].GetProperty("displayName").GetProperty("text").ToString();
                     i++;
                 }
             }
         }
-        return countryData;
+        return hotelData;
     }
 
-    //obsluga funkcji pol autocomplete
 
-    private void CountryValueChanged(string newValue)
-    {
-        Country = newValue;
-    }
-
-    private void OnSubmitClick()
-    {
-
-        if (_dateRange != null && _dateRange.Start.HasValue && _dateRange.End.HasValue)
+    private async void HotelValueChange(string newValue)
+    {        
+        Hotel = newValue;
+        if (string.IsNullOrEmpty(newValue)) return;
+        string photoName ="";
+        var client = new myHttpClient();
+        var response = await client.SearchForHotel(Hotel);
+        if (response.IsSuccessStatusCode)
         {
-            var startDate = _dateRange.Start.Value.ToString("dd-MM-yyyy");
-            var endDate = _dateRange.End.Value.ToString("dd-MM-yyyy");
-
-            TravelData.SelectedDateRange = _dateRange;
-            TravelData.hotel_name = hotel_name;
-            Navigation.NavigateTo("/Planner");
-
-
-            //selectedPlaceDescription += $"{startDate} do {endDate}";
+            var jsonString = await response.Content.ReadFromJsonAsync<JsonDocument>();
+            if (jsonString != null)
+            {
+                var rootPlaces = jsonString.RootElement.GetProperty("places");
+                photoName = rootPlaces[0].GetProperty("photos")[0].GetProperty("name").ToString();
+            }
         }
-        else
+
+        client = new myHttpClient();
+        var photoResponse = await client.SearchForHotelPhotos(photoName);
+        if (photoResponse.IsSuccessStatusCode)
         {
-            //selectedPlaceDescription += " Date invalid or empty";
+            var photoResponseContent = await response.Content.ReadFromJsonAsync<JsonDocument>();
+            if (photoResponseContent != null)
+            {
+                var photoUri = photoResponseContent.RootElement.GetProperty("photoUri").ToString();
+                photoUri = selectedPlaceImageUrl;
+                //var photoUri = JsonSerializer.Deserialize<HotelPhoto>(photoResponseContent);
+            }
         }
-    }
 
-    protected override async Task OnInitializedAsync()
-    {
+        Console.WriteLine(selectedPlaceImageUrl);
 
-    }
-
-    private void NavigateToTravelList()
-    {
-        Navigation.NavigateTo("/TravelList");
-    }
-
-    private void NavigateToPlace()
-    {
-        Navigation.NavigateTo("/place");
-    }
-
-    private void NavigateToPlanner()
-    {
-        Navigation.NavigateTo("/planner");
     }
 }
