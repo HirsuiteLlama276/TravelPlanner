@@ -2,8 +2,6 @@
 @inject HttpClient Http
 @inject TravelDataMigration TravelData
 @inject NavigationManager Navigation
-@using Newtonsoft.Json.Linq
-@using MudBlazor
 @using System.Text.Json
 
 <MudPopoverProvider></MudPopoverProvider>
@@ -140,20 +138,9 @@
                                 <img src="@selectedPlaceImageUrl" id="selectedImage" alt="Selected Place" style="width: 100%; min-width:700px; height: auto; max-height: 500px; object-fit: contain;" onload="adjustDescriptionWidth()" />
                             </div>
                             <div id="selectedDescription" style="text-align: center; margin: 20px auto 0 auto; width: fit-content;">
-                                <p style="word-wrap: break-word;">@selectedPlaceDescription</p>
+                                <a style="word-wrap: break-word;" href =@selectedPlaceDescription>Strona hotelu</a>
 
                             </div>
-                            @if (!string.IsNullOrEmpty(selectedPlaceImageUrl))
-                            {
-                                <div style="text-align: center;">
-                                    <div style="display: inline-block; max-width: 100%; overflow: hidden;">
-                                        <img src="@selectedPlaceImageUrl" id="selectedImage" alt="Selected Place" style="width: 100%; min-width:700px; height: auto; max-height: 500px; object-fit: contain;" onload="adjustDescriptionWidth()" />
-                                    </div>
-                                    <div id="selectedDescription" style="text-align: center; margin: 20px auto 0 auto; width: fit-content;">
-                                        <p style="word-wrap: break-word;">@selectedPlaceDescription</p>
-                                    </div>
-                                </div>
-                            }
                         </div>
 
                     }
@@ -165,21 +152,17 @@
 
 @code {
     public string Hotel = "";
-
-    string selectedPlaceDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
-    "Ut porta molestie lorem ac mattis. Nunc cursus quis nibh eget iaculis.";
+    string selectedPlaceDescription = "";
     string selectedPlaceImageUrl="";
     private string[] hotelData = new string[5];
 
 
     private async Task<IEnumerable<string>> SearchForHotel(string searchText)
-
     {
         var client = new myHttpClient();
         hotelData = new string[5];
         if (searchText == "")
             return hotelData;
-        
         var response = await client.SearchForHotel(searchText);
         if (response.IsSuccessStatusCode)
         {
@@ -212,23 +195,33 @@
             {
                 var rootPlaces = jsonString.RootElement.GetProperty("places");
                 photoName = rootPlaces[0].GetProperty("photos")[0].GetProperty("name").ToString();
+                selectedPlaceDescription = rootPlaces[0].GetProperty("websiteUri").ToString();
             }
         }
-
         client = new myHttpClient();
         var photoResponse = await client.SearchForHotelPhotos(photoName);
         if (photoResponse.IsSuccessStatusCode)
         {
-            var photoResponseContent = await response.Content.ReadFromJsonAsync<JsonDocument>();
+            var photoResponseContent = await photoResponse.Content.ReadFromJsonAsync<JsonDocument>();
             if (photoResponseContent != null)
-            {
-                var photoUri = photoResponseContent.RootElement.GetProperty("photoUri").ToString();
-                photoUri = selectedPlaceImageUrl;
-                //var photoUri = JsonSerializer.Deserialize<HotelPhoto>(photoResponseContent);
+            { 
+                selectedPlaceImageUrl = photoResponseContent.RootElement.GetProperty("photoUri").ToString();
             }
         }
+    }
+    
+    private void NavigateToTravelList()
+    {
+        Navigation.NavigateTo("/TravelList");
+    }
 
-        Console.WriteLine(selectedPlaceImageUrl);
+    private void NavigateToPlace()
+    {
+        Navigation.NavigateTo("/place");
+    }
 
+    private void NavigateToPlanner()
+    {
+        Navigation.NavigateTo("/planner");
     }
 }
