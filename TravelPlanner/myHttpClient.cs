@@ -24,10 +24,8 @@ public class myHttpClient: HttpClient
     }
     public async Task<HttpResponseMessage> SearchForHotelPhotos(string placeId)
     {
-        //Console.WriteLine(placeId);
         _client.DefaultRequestHeaders.Add("accept","application/json");
         HttpResponseMessage task = await _client.GetAsync($"https://places.googleapis.com/v1/{placeId}/media?maxHeightPx=1920&maxWidthPx=1080&key={GetApiKey}&skipHttpRedirect=true");
-        //HttpResponseMessage response = await _client.GetAsync("https://places.googleapis.com/v1/places/ChIJNTbAYao6F0cRGih4nWitIy4/photos/ATplDJbZOD5DInnAmH_WkQmMeBJHVooSb8DRbzIKWnYKGF886gZNHBXlENZlSMNgApBXBuXcIE4kTzlDcCf0eWE9fRcsyc2OK1fN4VM2Q-U-LCzMVVsDw7vgK1elV9iA1aFtrVzy77x9cmwPmSW2mEanZLky0nKZsXYqj7PN/media?maxHeightPx=1920&maxWidthPx=1080&key=AIzaSyDG4Nl7kgH0kri6TlLd6nsB162XHy-X_A0&skipHttpRedirect=true");
         return task;
     }
 }
