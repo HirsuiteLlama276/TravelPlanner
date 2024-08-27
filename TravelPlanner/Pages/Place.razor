@@ -1,7 +1,8 @@
-﻿@page "/place"
+﻿@page "/"
 @inject TravelDataMigration TravelData
 @inject NavigationManager Navigation
 @using System.Text.Json
+@using TravelPlanner.Travel
 
 <MudPopoverProvider></MudPopoverProvider>
 
@@ -121,6 +122,8 @@
                 </MudStack>
             </MudContainer>
         </MudPaper>
+        <MudButton OnClick="@SaveHotel" Color="Color.Primary" Variant="Variant.Text"
+                   Style="border: 1px solid green; border-radius: 4px;font-size:larger">Zapisz hotel</MudButton>
     </MudItem>
     <MudItem xs="8">
         <MudPaper class="rounded-3" Height="100%" Style="background-color: lightblue;">
@@ -128,18 +131,17 @@
                 <div style="width: 100%; height: 100%; position: relative; text-align: center;">
                     <div style="width: 100%; height: 100px; background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,123,255,1) 100%);
                         text-align: center; display: flex; align-items: center;
-                        justify-content: center; display: @(string.IsNullOrEmpty(selectedPlaceImageUrl) ? "flex" : "none");">
+                        justify-content: center; display: @(string.IsNullOrEmpty(_selectedPlaceImageUrl) ? "flex" : "none");">
                         <p style="font-size: 24px; color: white;">Gdzie się zatrzymasz?</p>
                     </div>
-                    @if (!string.IsNullOrEmpty(selectedPlaceImageUrl))
+                    @if (_selectedPlaceImageUrl != "")
                     {
                         <div style="text-align: center;">
                             <div style="display: inline-block; max-width: 100%; overflow: hidden;">
-                                <img src="@selectedPlaceImageUrl" id="selectedImage" alt="Selected Place" style="width: 100%; min-width:700px; height: auto; max-height: 500px; object-fit: contain;" onload="adjustDescriptionWidth()" />
+                                <img src="@_selectedPlaceImageUrl" id="selectedImage" alt="Selected Place" style="width: 100%; min-width:700px; height: auto; max-height: 500px; object-fit: contain;" onload="adjustDescriptionWidth()" />
                             </div>
                             <div id="selectedDescription" style="text-align: center; margin: 20px auto 0 auto; width: fit-content;">
-                                <a style="word-wrap: break-word;" href =@selectedPlaceDescription>Strona hotelu</a>
-
+                                <a style="word-wrap: break-word;" href =@_selectedPlaceDescription>Strona hotelu</a>
                             </div>
                         </div>
 
@@ -152,17 +154,17 @@
 
 @code {
     public string Hotel = "";
-    string selectedPlaceDescription = "";
-    string selectedPlaceImageUrl="";
-    private string[] hotelData = new string[5];
+    string _selectedPlaceDescription = "";
+    string _selectedPlaceImageUrl="";
+    private string[] _hotelData = new string[5];
 
 
     private async Task<IEnumerable<string>> SearchForHotel(string searchText)
     {
         var client = new myHttpClient();
-        hotelData = new string[5];
+        _hotelData = new string[5];
         if (searchText == "")
-            return hotelData;
+            return _hotelData;
         var response = await client.SearchForHotel(searchText);
         if (response.IsSuccessStatusCode)
         {
@@ -172,12 +174,12 @@
                 var rootPlaces = jsonString.RootElement.GetProperty("places");
                 for (int i = 0; i < 5; i++)
                 {
-                    hotelData[i] = rootPlaces[i].GetProperty("displayName").GetProperty("text").ToString();
+                    _hotelData[i] = rootPlaces[i].GetProperty("displayName").GetProperty("text").ToString();
                     i++;
                 }
             }
         }
-        return hotelData;
+        return _hotelData;
     }
 
 
@@ -195,7 +197,7 @@
             {
                 var rootPlaces = jsonString.RootElement.GetProperty("places");
                 photoName = rootPlaces[0].GetProperty("photos")[0].GetProperty("name").ToString();
-                selectedPlaceDescription = rootPlaces[0].GetProperty("websiteUri").ToString();
+                _selectedPlaceDescription = rootPlaces[0].GetProperty("websiteUri").ToString();
             }
         }
         client = new myHttpClient();
@@ -205,7 +207,25 @@
             var photoResponseContent = await photoResponse.Content.ReadFromJsonAsync<JsonDocument>();
             if (photoResponseContent != null)
             { 
-                selectedPlaceImageUrl = photoResponseContent.RootElement.GetProperty("photoUri").ToString();
+                _selectedPlaceImageUrl = photoResponseContent.RootElement.GetProperty("photoUri").ToString();
+            }
+        }
+    }
+
+    private async void SaveHotel()
+    {
+        var data = new fileManager();
+        //var data = new databaseConnection();
+        if (Hotel != "")
+        {   
+            var task = data.saveHotel(Hotel);
+            if (task.IsCompletedSuccessfully)
+            {
+                Navigation.NavigateTo("/planner"); 
+            }
+            else
+            {
+                Console.WriteLine("Something went wrong with adding hotel");
             }
         }
     }
@@ -217,7 +237,7 @@
 
     private void NavigateToPlace()
     {
-        Navigation.NavigateTo("/place");
+        Navigation.NavigateTo("/");
     }
 
     private void NavigateToPlanner()
